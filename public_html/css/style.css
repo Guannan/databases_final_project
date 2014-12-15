@@ -11,3 +11,18 @@ body {
 
     background-color: white;
 }
+
+table.results {
+    border: 1px solid black;
+}
+    table.results th {
+        padding: 3px 10px;
+        border: 1px solid black;
+    }
+    table.results td {
+        padding: 3px 10px;
+        border: 1px solid black;
+    }
+    table.results td.numeric {
+        text-align: center;        
+    }
