@@ -1,14 +1,18 @@
-<html> 
-<body>
-    <!-- Show fancy title --> 
-    <h1>JHU Student Explorer</h1>
-    
 <?php
     include 'config.php';
     include 'open.php';
-    
+    include 'header.php'; 
+
+    echo '<h1>Top Users</h1>';
+
     // Create and execute the query
-    $sql    = 'SELECT StuID, CONCAT(FName, \' \' ,LName) as Name FROM Student';
+    $attr = $_POST['attr'];
+    $lim = $_POST['limit'];
+
+    $sql    = 'SELECT CONCAT(FName, \' \' ,LName) as Name, Industry FROM User ORDER BY ' . $attr;
+    if ($_POST['order'] == 'DESC')
+        $sql = $sql . ' DESC';
+    $sql = $sql . ' LIMIT 0,' . $lim;
     $result = mysql_query($sql, $conn);
 
     // check if the query successfully executed
@@ -19,20 +23,14 @@
     }
     
     // show results
-    echo '<h3>Students </h3>';
-    
-    /*
-    while ($row = mysql_fetch_assoc($result)) {
-        echo $row['StuID'] . ' ' . $row['Name'] . '<br/>' ;
-    }
-    */
+    echo '<h3>Most Popular Users</h3>';
     
     echo '<table border=1>';
-    echo '<tr> <th>Student ID</th> <th>Name</th></tr>';
+    echo '<tr> <th>Name</th> <th>Industry</th></tr>';
     while ($row = mysql_fetch_assoc($result)) {
         echo '<tr>' ;
-        echo '<td>' . $row['StuID'] .  '</td>' ;
-        echo '<td>' . $row['Name'] .  '</td>';
+        echo '<td>' . $row['Name'] .  '</td>' ;
+        echo '<td>' . $row['Industry'] .  '</td>';
         echo '</tr>';
     }
     echo '</table>';
@@ -41,7 +39,6 @@
     // flush
     mysql_free_result($result);
     
-    
-    ?>
-</html> 
-</body> 
+    include 'footer.php';    
+?>
+

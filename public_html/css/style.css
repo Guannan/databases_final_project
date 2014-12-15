@@ -1,0 +1,13 @@
+body {
+    background-color: #CCCCCC;
+}
+
+#content {
+    width: 700px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+
+    background-color: white;
+}
