@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'includes/header.php'; ?>
 
 <?php
     # Available fields for graphing, along with the table they are stored in
@@ -25,4 +25,4 @@
     <input type="submit" value="See graph" /> 
 </form>
 
-<?php include 'footer.php' ?>
+<?php include 'includes/footer.php' ?>
