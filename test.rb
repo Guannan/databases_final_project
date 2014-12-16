@@ -10,8 +10,6 @@ File.readlines('links.txt').each do |line|
 	end
 end
 
-
-
 USER_AGENTS = ['Windows IE 6', 'Windows IE 7', 'Windows Mozilla', 'Mac Safari', 'Mac FireFox', 'Mac Mozilla', 'Linux Mozilla', 'Linux Firefox', 'Linux Konqueror']
 
 @user_id = 0
@@ -20,6 +18,7 @@ USER_AGENTS = ['Windows IE 6', 'Windows IE 7', 'Windows Mozilla', 'Mac Safari', 
 @skill_id = 300
 @group_id = 400
 @language_id = 500
+@employer_id = 600
 
 def http_client
   	Mechanize.new do |agent|
@@ -43,7 +42,6 @@ end
 def parse_connections(mech)
 	(mech.at('.member-connections').text if mech.at('.member-connections')).gsub(/[^0-9]/, '')
 end
-
 
 def parse_industry(mech)
 	mech.at('.industry').text.gsub(/\s+/, ' ').strip if mech.at('.industry')
@@ -73,11 +71,18 @@ def generate_language_id
 	@language_id = @language_id + 1
 end
 
+def generate_employer_id
+	@employer_id = @employer_id + 1
+end
+
 def parse_skills(mech)
 	mech.search('.skill-pill .endorse-item-name-text').map { |skill| skill.text.strip if skill.text } rescue nil
 end
 
-# exit 1;
+def parse_date(date)
+  	date = "#{date}-01-01" if date =~ /^(19|20)\d{2}$/
+  	Date.parse(date)
+end
 
 def generate_sql(mech)
 	first_name = parse_firstname(mech)
@@ -127,6 +132,43 @@ def generate_sql(mech)
 		puts "insert into Knows_language values ( #{@user_id} , #{@language_id});"
 		puts "insert into Languages values ( #{@language_id} , '#{language_name}');"
 	end
+
+	employments = []
+	if mech.search(".background-experience .current-position").first
+		mech.search(".background-experience .current-position").each do |experience|
+
+		employment = {}
+		employment[:type] = experience.at('h4').text.gsub(/\s+|\n/, ' ').strip if experience.at('h4')
+		employment[:location] = experience.at('h4').next.text.gsub(/\s+|\n/, ' ').strip if experience.at('h4').next
+		start_date, end_date = experience.at('.experience-date-locale').text.strip.split(" – ") rescue nil
+		employment[:start_date] = parse_date(start_date) rescue nil
+		employment[:end_date] = parse_date(end_date) rescue nil
+
+		employments << employment
+		end
+	end
+	if mech.search(".background-experience .past-position").first
+		mech.search(".background-experience .past-position").each do |experience|
+
+		employment = {}
+		employment[:type] = experience.at('h4').text.gsub(/\s+|\n/, ' ').strip if experience.at('h4')
+		employment[:location] = experience.at('h4').next.text.gsub(/\s+|\n/, ' ').strip if experience.at('h4').next		
+		start_date, end_date  = experience.at('.experience-date-locale').text.strip.split(" – ") rescue nil
+		employment[:start_date] = parse_date(start_date) rescue nil
+		employment[:end_date] = parse_date(end_date) rescue nil
+
+		employments << employment
+		end
+	end
+
+	employments.each do |employment|
+		generate_employer_id
+		employer_name = employment[:location]
+		start_date = employment[:start_date]
+		end_date = employment[:end_date]
+		puts "insert into Employer values ( #{@employer_id} , '#{employer_name}');"
+		puts "insert into Experience values ( #{@user_id} , #{@employer_id}, '#{start_date}', '#{end_date}');"
+	end
 end
 
 links_arr.each do |profile_link|
@@ -134,17 +176,19 @@ links_arr.each do |profile_link|
 	mech = http_client.get(profile_link)
 	# html= mech.body
 	generate_sql(mech)
+
+	visitor_links = mech.search('.insights-browse-map/ul/li').map do |visitor|
+		v = {}
+		v[:link]    = visitor.at('a')['href']
+		v[:name]    = visitor.at('h4/a').text
+		v[:title]   = visitor.at('.browse-map-title').text.gsub('...', ' ').split(' at ').first
+		v[:company] = visitor.at('.browse-map-title').text.gsub('...', ' ').split(' at ')[1]
+		v
+	end
+
 	delay_me
 end
 
-# visitor_links = mech.search('.insights-browse-map/ul/li').map do |visitor|
-# 	v = {}
-# 	v[:link]    = visitor.at('a')['href']
-# 	v[:name]    = visitor.at('h4/a').text
-# 	v[:title]   = visitor.at('.browse-map-title').text.gsub('...', ' ').split(' at ').first
-# 	v[:company] = visitor.at('.browse-map-title').text.gsub('...', ' ').split(' at ')[1]
-# 	v
-# end
 
 # puts visitor_links
 
