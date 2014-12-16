@@ -6,9 +6,12 @@
 
     $fields = array("Num Connections" => array("User", "User.NumConnection", "NumConnection"),
         "Age" => array("User", "User.Age", "Age"),
-        "Num Skills" => array("Has_skill", "COUNT(Has_skill.SkillID) as NumSkills", "NumSkills", "UserID"));
+        "Num Skills" => array("Has_skill", "COUNT(Has_skill.SkillID) as NumSkills", "NumSkills", "UserID"),
+        "Num Languages" => array("Knows_language", "COUNT(Knows_language.LanguageID) as NumLanguages", "NumLanguages", "UserID"),
+        "Num Jobs" => array("Experience", "COUNT(Experience.EmployerID) as NumJobs", "NumJobs", "UserID")
+      );
 
-    $join_conditions = array("User" => array("Has_skill" => "User.UserID=Has_skill.UserID"));
+    //$join_conditions = array("User" => array("Has_skill" => "User.UserID=Has_skill.UserID", "Knows_Language" ));
 
     // Create and execute the query
     $x_name = $_POST['xvar'];
@@ -24,12 +27,16 @@
     $table_string = $x[0];
     $condition = '';
     if ($x[0] != $y[0]) {
+        $condition = ' WHERE ' . $x[0] . '.UserID=' . $y[0] . '.UserID';
+
         $table_string = $x[0] . ',' . $y[0];
 
+        /**
         if (array_key_exists($x[0], $join_conditions) and array_key_exists($y[0], $join_conditions[$x[0]]))
             $condition = ' WHERE ' . $join_conditions[$x[0]][$y[0]];
         else
             $condition = ' WHERE ' . $join_conditions[$y[0]][$x[0]];
+        **/
     }
 
     $sql    = 'SELECT ' . $attr_string . ' FROM ' . $table_string . $condition;
@@ -42,6 +49,7 @@
     elseif (count($y) > 3) {
         $sql = $sql . ' GROUP BY ' . $y[0] . '.' . $y[3];
     }
+
     $result = mysql_query($sql, $conn);
 
     // check if the query successfully executed

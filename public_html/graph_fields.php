@@ -2,20 +2,20 @@
 
 <?php
     # Available fields for graphing, along with the table they are stored in
-    $numeric_fields = array("Num Connections", "Age", "Num Skills");
+    $numeric_fields = array("Num Connections", "Age", "Num Skills", "Num Languages", "Num Jobs");
 ?>
 
 
 <h1>Explore Relationships</h1>
 <form action="graph_relations.php" method="post"> 
     <?php
-        echo 'X Variable: <select name="xvar">';
+        echo 'Plot <select name="yvar">';
         foreach ($numeric_fields as $f) {
             echo '<option value="' . $f . '">' . $f . '</option>';
         }
-        echo '</select><br><br>';
+        echo '</select>';
 
-        echo 'Y Variable: <select name="yvar">';
+        echo ' as a function of <select name="xvar">';
         foreach ($numeric_fields as $f) {
             echo '<option value="' . $f . '">' . $f . '</option>';
         }
