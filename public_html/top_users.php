@@ -1,7 +1,7 @@
 <?php
-    include 'config.php';
-    include 'open.php';
-    include 'header.php'; 
+    include 'includes/config.php';
+    include 'includes/open.php';
+    include 'includes/header.php'; 
 
     echo '<h1>Top Users</h1>';
 
@@ -40,6 +40,6 @@
     // flush
     mysql_free_result($result);
     
-    include 'footer.php';    
+    include 'includes/footer.php';    
 ?>
 
