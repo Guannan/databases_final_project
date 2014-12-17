@@ -56,3 +56,19 @@ table.results {
     font-family: sans-serif;
     font-size: 11px;
 }
+
+.barLabel text {
+    font-family: sans-serif;
+    font-size: 11px;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1.5px;
+}
+
+.dot {
+    stroke: none;
+    fill: steelblue;
+}
