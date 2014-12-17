@@ -4,6 +4,22 @@ require 'mechanize'
 
 class RetrieveProfile
 
+	class << self; 
+		attr_accessor :user_id, 
+					  :university_id,
+					  :university_id_mark,
+					  :degree_id,
+					  :degree_id_mark,
+					  :skill_id,
+					  :skill_id_mark,
+					  :group_id,
+					  :group_id_mark,
+					  :language_id,
+					  :language_id_mark,
+					  :employer_id,
+					  :employer_id_mark
+	end
+
 	@user_id = 0
 	@university_id = {}
 	@university_id_mark = 100
@@ -46,31 +62,31 @@ class RetrieveProfile
 	end
 
 	def generate_user_id
-		@user_id = @user_id + 1
+		RetrieveProfile.user_id += 1
 	end
 
 	def generate_university_id
-		@university_id_mark += 1
+		RetrieveProfile.university_id_mark += 1
 	end
 
 	def generate_degree_id
-		@degree_id_mark += 1
+		RetrieveProfile.degree_id_mark += 1
 	end
 
 	def generate_skill_id
-		@skill_id_mark += 1
+		RetrieveProfile.skill_id_mark += 1
 	end
 
 	def generate_group_id
-		@group_id_mark += 1
+		RetrieveProfile.group_id_mark += 1
 	end
 
 	def generate_language_id
-		@language_id_mark += 1
+		RetrieveProfile.language_id_mark += 1
 	end
 
 	def generate_employer_id
-		@employer_id_mark += 1
+		RetrieveProfile.employer_id_mark += 1
 	end
 
 	def parse_skills(mech)
@@ -103,38 +119,39 @@ class RetrieveProfile
 
 		generate_user_id
 		age = 0
-		puts "insert into User values ( #{@user_id} , '#{first_name}' , '#{last_name}', #{connections}, #{age}, '#{industry}');"
+		puts "insert into User values ( #{RetrieveProfile.user_id} , '#{first_name}' , '#{last_name}', #{connections}, #{age}, '#{industry}');"
 
 		education = mech.search('.background-education .education').map do |item|
 			university_name = item.at('h4').text.gsub(/\s+|\n/, ' ').strip if item.at('h4')
-			puts item
-			degree_name = item.at('h5').text.gsub(/\s+|\n/, ' ').strip if item.at('h5')
+			degree_name = item.at('.degree').text.gsub(/\s+|\n/, ' ').strip if item.at('.degree')
+			degree_name = degree_name.chomp(',')  # for some reason, all degree names are followed by a comma in the html			
+			degree_name = degree_name.gsub(/\'/, '').strip if item.at('.degree')			
 			period = item.at('.education-date').text.gsub(/\s+|\n/, ' ').strip if item.at('.education-date')
 
-			if !@university_id.has_key?(university_name)
-				@university_id[university_name] = @university_id_mark
+			if !RetrieveProfile.university_id.has_key?(university_name)
+				RetrieveProfile.university_id[university_name] = RetrieveProfile.university_id_mark
 				generate_university_id
 			end
 
-			if !@degree_id.has_key?(degree_name)
-				@degree_id[degree_name] = @degree_id_mark
+			if !RetrieveProfile.degree_id.has_key?(degree_name)
+				RetrieveProfile.degree_id[degree_name] = RetrieveProfile.degree_id_mark
 				generate_degree_id
 			end
-			puts "insert into Education values ( #{@user_id} , #{@university_id[university_name]} , #{@degree_id[degree_name]} , '#{degree_name}', '#{period}', '#{period}');"
-			puts "insert into University values ( #{@university_id[university_name]} , '#{university_name}');"	
+			puts "insert into Education values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.university_id[university_name]} , #{RetrieveProfile.degree_id[degree_name]} , '#{degree_name}', '#{period}', '#{period}');"
+			puts "insert into University values ( #{RetrieveProfile.university_id[university_name]} , '#{university_name}');"	
 		end
 
 		endorsements = 0
 
 		skills.each do |skill|
 			
-			if !@skill_id.has_key?(skill)
-				@skill_id[skill] = @skill_id_mark
+			if !RetrieveProfile.skill_id.has_key?(skill)
+				RetrieveProfile.skill_id[skill] = RetrieveProfile.skill_id_mark
 				generate_skill_id
 			end
 
-			puts "insert into Has_skill values ( #{@user_id} , #{@skill_id[skill]}, #{endorsements});"
-			puts "insert into Skill values ( #{@skill_id[skill]} , '#{skill}');"
+			puts "insert into Has_skill values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.skill_id[skill]}, #{endorsements});"
+			puts "insert into Skill values ( #{RetrieveProfile.skill_id[skill]} , '#{skill}');"
 		end
 
 		member_count = 0
@@ -142,26 +159,26 @@ class RetrieveProfile
 			group_name = item.text.gsub(/\s+|\n/, ' ').strip
 			# group_link = "http://www.linkedin.com#{item.at('a')['href']}"
 
-			if !@group_id.has_key?(group_name)
-				@group_id[group_name] = @group_id_mark
+			if !RetrieveProfile.group_id.has_key?(group_name)
+				RetrieveProfile.group_id[group_name] = RetrieveProfile.group_id_mark
 				generate_group_id
 			end
 
-			puts "insert into Member_of values ( #{@user_id} , #{@group_id[group_name]});"
-			puts "insert into Groups values ( #{@group_id[group_name]} , '#{group_name}', #{member_count});"
+			puts "insert into Member_of values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.group_id[group_name]});"
+			puts "insert into Groups values ( #{RetrieveProfile.group_id[group_name]} , '#{group_name}', #{member_count});"
 		end
 
 		languages = mech.search('.background-languages #languages ol li').map do |item|
 			language_name    = item.at('h4').text rescue nil
 			# proficiency = item.at('div.languages-proficiency').text.gsub(/\s+|\n/, ' ').strip rescue nil
 
-			if !@language_id.has_key?(language_name)
-				@language_id[language_name] = @language_id_mark
+			if !RetrieveProfile.language_id.has_key?(language_name)
+				RetrieveProfile.language_id[language_name] = RetrieveProfile.language_id_mark
 				generate_language_id
 			end
 
-			puts "insert into Knows_language values ( #{@user_id} , #{@language_id[language_name]});"
-			puts "insert into Languages values ( #{@language_id[language_name]} , '#{language_name}');"
+			puts "insert into Knows_language values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.language_id[language_name]});"
+			puts "insert into Languages values ( #{RetrieveProfile.language_id[language_name]} , '#{language_name}');"
 		end
 
 		employments = []
@@ -195,16 +212,16 @@ class RetrieveProfile
 
 		employments.each do |employment|
 
-			if !@employer_id.has_key?(employment[:location])
-				@employer_id[employment[:location]] = @employer_id_mark
+			if !RetrieveProfile.employer_id.has_key?(employment[:location])
+				RetrieveProfile.employer_id[employment[:location]] = RetrieveProfile.employer_id_mark
 				generate_employer_id
 			end
 
 			employer_name = employment[:location]
 			start_date = employment[:start_date]
 			end_date = employment[:end_date]
-			puts "insert into Employer values ( #{@employer_id[employment[:location]]} , '#{employer_name}');"
-			puts "insert into Experience values ( #{@user_id} , #{@employer_id[employment[:location]]}, '#{start_date}', '#{end_date}');"
+			puts "insert into Employer values ( #{RetrieveProfile.employer_id[employment[:location]]} , '#{employer_name}');"
+			puts "insert into Experience values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.employer_id[employment[:location]]}, '#{start_date}', '#{end_date}');"
 		end
 	end
 
