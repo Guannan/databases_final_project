@@ -124,7 +124,7 @@ class RetrieveProfile
 		education = mech.search('.background-education .education').map do |item|
 			university_name = item.at('h4').text.gsub(/\s+|\n/, ' ').strip if item.at('h4')
 			degree_name = item.at('.degree').text.gsub(/\s+|\n/, ' ').strip if item.at('.degree')
-			degree_name = degree_name.chomp(',')  # for some reason, all degree names are followed by a comma in the html			
+			degree_name = degree_name.chomp(',') if degree_name != nil # for some reason, all degree names are followed by a comma in the html			
 			degree_name = degree_name.gsub(/\'/, '').strip if item.at('.degree')			
 			period = item.at('.education-date').text.gsub(/\s+|\n/, ' ').strip if item.at('.education-date')
 
@@ -248,12 +248,10 @@ class RetrieveProfile
 end
 
 links_arr = []
-count = 1
 File.readlines('onelink.txt').each do |line|
-	count += 1
 	if "#{line}".chomp != ""
-		# puts "#{line}"
-		links_arr = links_arr + [line]
+		# links_arr = links_arr + [line]
+		links_arr << line
 	end
 end
 
@@ -272,13 +270,29 @@ USER_AGENTS = [ 'Windows IE 6',
 
 profile = RetrieveProfile.new
 
+while 1
+	if links_arr.size <= 0
+		break
+	else
+		profile_link = links_arr.pop
+		# puts profile_link
+		mech = @agent.get(profile_link)
+		profile.generate_sql(mech)	
 
-links_arr.each do |profile_link|
-	mech = @agent.get(profile_link)
-	profile.generate_sql(mech)
-	# profile.generate_degree(mech)
-
-
+		visitor_links = mech.search('.insights-browse-map/ul/li').map do |visitor|
+			v = {}
+			v[:link] = visitor.at('a')['href']
+			links_arr << v[:link]
+		end			
+	end
+	profile.delay_me
 end
+
+# links_arr.each do |profile_link|
+# 	mech = @agent.get(profile_link)
+# 	profile.generate_sql(mech)
+# end
+
+
 
 
