@@ -22,6 +22,9 @@ cursor.execute("select * from University;")
 results = cursor.fetchone()
 print str(results[1])   # returns JOHNS HOPKINS
 
+field = "Computer Software"
+getSkills_cmd = "select  from User as U, Has_skills as Hs, Skills as  where U.Industry = "+filed+" AND U.UserID = Hs.UserID AND "
+
 # for sql_statement in sql_statements:
 # 	cursor.execute(sql_statement)
 
