@@ -56,10 +56,40 @@
         }
     }
 
+
+    for ($i = 1; $i <= intval($_POST['numFilters']); $i++) {
+        if (array_key_exists('filter' . $i, $_POST)) {
+            $filterName = 'filter' . $i;
+            $attr = $_POST[$filterName];
+
+            foreach ($filters[$attr][1] as $table) {
+                if (!in_array($table, $table_ids)) {
+                    foreach ($table_ids as $t) {
+                        if (array_key_exists($table, $cross_refs[$t])) {
+                            $conditions[] = $cross_refs[$t][$table];
+                        }
+                    }
+                    $table_ids[] = $table;
+                    $table_names[] = $tables[$table];
+                }
+            }
+
+            if (array_key_exists($filterName . 'min', $_POST)) {
+                $min = $_POST[$filterName . 'min'];
+                $max = $_POST[$filterName . 'max'];
+                $conditions[] = $filters[$attr][2] . '>=' . $min;
+                $conditions[] = $filters[$attr][2] . '<=' . $max;
+            }
+            else {
+                $val = $_POST[$filterName . 'val'];
+                $conditions[] = $filters[$attr][2] . "='" . $val . "'";
+            }
+        }
+    }
+
     $table_str = join(",", $table_names);
  
     $condition_str = '';
-
     if (count($conditions) > 0) {
         $condition_str = ' WHERE ' . join(' AND ', $conditions);
     }
@@ -77,6 +107,12 @@
 
     if ($mode != 0) {
         $sql = 'SELECT varA, ' . $agg . '(varB) AS varB FROM (' . $sql . ') as s GROUP BY varA';
+        if ($mode == 1) {
+            $sql = $sql . ' ORDER BY varB';
+            if ($_POST['order'] == 'DESC')
+                $sql = $sql . ' DESC';
+            $sql = $sql . ' LIMIT 0,40';
+        }
     }
 
     //echo 'Query: ' .  $sql . '<br>';

@@ -7,10 +7,14 @@
 
 <h1 id="title"></h1>
 <div id="canvas"></div>
+<div id="categorical" style="display:none">
+    <?php echo json_encode(array_keys($categorical_vars)) ?>
+</div>
+
 <div id="inputForm">
     <form name="ajaxform" id="ajaxform" action="get_relation_data.php" method="POST">
-        Plot <select name="aggregation">
-            <option value="ALL">All</option>
+        Plot <select id="aggregation" name="aggregation">
+            <option value="ALL" disabled>All</option>
             <option value="AVG" selected="selected">Average</option>
             <option value="MAX">Maximum</option>
             <option value="MIN">Minimum</option>
@@ -22,17 +26,160 @@
             }
             echo '</select>';
 
-            echo ' as a function of <select name="xvar">';
+            echo ' as a function of <select name="xvar" onchange="updateForm(this)">';
             foreach (array_merge($categorical_vars, $continuous_vars) as $f=>$g) {
                 echo '<option value="' . $f . '">' . $f . '</option>';
             }
-            echo '</select><br/><br/>';
+            echo '</select>';
         ?>
+        <span id="order">in <select name="order">
+            <option value="DESC">Descending</option>
+            <option value="ASC">Ascending</option>
+        </select> order (max 40). </span><br/><br/>
+
+        <div id="filterPanel">
+            <button onclick="addFilter()">Add Filter</button>
+            <div id="filters"></div>
+        </div>
+        <br>
         <input type="submit" value="Update"/>
     </form>
 </div>
 
 <script>
+/**
+    var submit = false;
+    $("#ajaxform").submit(function(e){ 
+        if (!submit) {
+            submit = true;
+            return false; }
+        else return true; });
+**/
+
+    function updateForm(select) {
+        var categorical = JSON.parse($("#categorical").text());
+        if (categorical.indexOf($(select).val()) > -1) {
+            $("#order").show();
+            $("#aggregation option[value='ALL']").attr('disabled', 'disabled');
+       
+            if ($("#aggregation option:selected").val() == 'ALL') {
+                $("#aggregation option[value='ALL']").removeAttr('selected');
+                $("#aggregation option[value='AVG']").attr('selected', 'selected');
+            }
+        }
+        else {
+            $("#order").hide();
+            $("#aggregation option[value='ALL']").removeAttr('disabled');
+        }
+    }
+
+
+    function removeFilter(filter) {
+        $(filter).parent().remove();
+    }
+
+
+    var numFilters = 0;
+
+    function addFilter() {
+        $.ajax(
+        {
+            url: 'get_filter_list.php',
+            success: function(result)
+            {
+                var attrs = JSON.parse(result);
+
+                var filter = document.createElement("select");
+                numFilters++;
+                $(filter).attr("name", "filter"+numFilters)
+                         .attr("onchange", "updateFilterInfo(this)");
+                for (var i = 0; i < attrs.length; i++) {
+                    var option = document.createElement("option");
+                    $(option).attr("name", attrs[i]).text(attrs[i]);
+
+                    $(filter).append(option);
+                }
+                var filterDiv = document.createElement("div");
+                $(filterDiv).attr("class", "filter");
+                $(filterDiv).append("Filter ");
+                $(filterDiv).append(filter);
+                $(filterDiv).append(document.createElement("span"));
+                var removeButton = document.createElement("button");
+                $(removeButton).attr("onclick", "removeFilter(this)")
+                        .attr("class", "removeButton")
+                        .text("Remove");
+                $(filterDiv).append(removeButton);
+                $(filterDiv).append("<br>");
+
+                $("#filters").append(filterDiv);
+
+                $(filter).attr("onchange", "updateFilterInfo(this)");
+                updateFilterInfo(filter);
+            },
+            error: function(jqXHR, status, error)
+            {
+                console.log('Error!');
+                console.log(jqXHR);
+                console.log(status);
+                console.log(error);
+            }
+        });
+
+    }
+
+
+    function updateFilterInfo(select) {
+        //var postData = $(this).serializeArray();
+        var postData = {name: $(select).val()};
+        $.ajax(
+        {
+            url: 'get_filter_info.php',
+            type: "POST",
+            data: postData,
+            success: function(result)
+            {
+                var info = JSON.parse(result);
+                if ('min' in info) {
+                    var p = $(select).next("span").empty();
+                    p.append(' between ');
+                    var minInput = document.createElement("input");
+                    $(minInput).attr("type", "number")
+                               .attr("value", info['min'])
+                               .attr("style", "width:6em")
+                               .attr("name", $(select).attr("name")+"min");
+                    p.append(minInput);
+                    p.append(" and ");
+                    var maxInput = document.createElement("input");
+                    $(maxInput).attr("type", "number")
+                               .attr("value", info['max'])
+                               .attr("style", "width:6em")
+                               .attr("name", $(select).attr("name")+"max");
+                    p.append(maxInput);
+                }
+                else {
+                    var p = $(select).next("span").empty();
+                    p.append(' = ');
+                    var list = document.createElement("select");
+                    $(list).attr("name", $(select).attr("name")+"val");
+                    for (var i = 0; i < info.length; i++) {
+                        var option = document.createElement("option");
+                        $(option).attr("name", info[i]).text(info[i]);
+                        $(list).append(option);
+                    }
+                    p.append(list);
+                }
+            },
+            error: function(jqXHR, status, error)
+            {
+                console.log('Error!');
+                console.log(jqXHR);
+                console.log(status);
+                console.log(error);
+            }
+        });
+        
+    }
+    
     function drawTitle(result) {
         var title = result.ylabel + ' vs. ' + result.xlabel;
         $("#title").text(title);
@@ -128,6 +275,7 @@
                    .attr("transform", function(d, i) { return "translate(" + (barPadding + padding[2] + i * barWidth) + ",0)"; });
 
             bar.append("rect")
+                   .attr("class", "bar")
                    .attr("y", function(d) { return yScale(d[yname]); })
                    .attr("width", barWidth - barPadding)
                    .attr("height", function(d) { return h-padding[1]-yScale(d[yname]); });
@@ -165,11 +313,11 @@
 
     } 
    
-
     // callback handler for form submit
     $("#ajaxform").submit(function(e)
     {
         var postData = $(this).serializeArray();
+        postData.push({"name": "numFilters", "value": numFilters.toString()});
         var formURL = $(this).attr("action");
         
         $.ajax(
@@ -180,7 +328,7 @@
             success: function(result)
             {
                 resultParsed = JSON.parse(result);
-                console.log(resultParsed);
+                //console.log(resultParsed);
                 drawTitle(resultParsed);
                 drawGraph(resultParsed);
             },
@@ -198,7 +346,6 @@
     });
 
     $("#ajaxform").submit();
-
 </script>
 
 <?php

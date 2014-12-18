@@ -34,10 +34,23 @@
       );
 
     $categorical_vars = array("Industry" => array("User.Industry", array(0), "", ""),
-        "University" => array("University.UniversityName", array(1,3), "", "")
+        "University" => array("University.UniversityName", array(1,3), "", ""),
+        "Degree" => array("Degree.DegreeName", array(1,2), "", ""),
+        "Skill" => array("Skill.SkillName", array(8,9), "", ""),
+        "Language" => array("Languages.LanguageName", array(10,11), "", "")
     );
 
-
-    //$aggregates = array("AVERAGE" => "AVERAGE"
+    // Attributes to filter on
+    // Format: Name => array(type (0=numeric, 1=categorical), Table ID, Attribute)
+    $filters = array("Age" => array(0, array(0), "User.Age", ""),
+        "NumConnections"=>array(0, array(0), "User.NumConnection", ""),
+//        "NumSkills"=>array(0, array(8), "COUNT(Has_skill.SkillID)", " GROUP BY UserID"),
+//        "NumLanguages"=>array(0, array(10), "COUNT(Knows_language.LanguageID)", " GROUP BY UserID"),
+        "Industry"=>array(1, array(0), "User.Industry", ""),
+        "University"=>array(1, array(3,1), "University.UniversityName", ""),
+        "Degree"=>array(1, array(2,1), "Degree.DegreeName", ""),
+        "Skill"=>array(1, array(9,8), "Skill.SkillName", ""),
+        "Language"=>array(1, array(11,10), "Languages.LanguageName", "")
+    );
 ?>
 
