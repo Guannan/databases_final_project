@@ -1,5 +1,4 @@
 
-https://www.linkedin.com/pub/shiliang-wang/7b/890/6a8
 insert into User values ( 0 , 'Shiliang' , 'Wang', 85, 0, 'Computer Software');
 insert into Education values ( 0 , 100 , 200 , 'Masters Degree', '2013 – 2014', '2013 – 2014');
 insert into University values ( 100 , 'The Johns Hopkins University');
@@ -36,7 +35,6 @@ insert into Experience values ( 0 , 600, '2014-07-01', '2014-12-15');
 insert into Employer values ( 601 , 'Seeds of Empowerment');
 insert into Experience values ( 0 , 601, '2011-08-01', '2014-12-15');
 
-http://www.linkedin.com/pub/paul-laurienti/8/301/4a4?trk=pub-pbmap
 insert into User values ( 1 , 'Paul' , 'Laurienti', 264, 0, 'Research');
 insert into Education values ( 1 , 102 , 202 , '', '1991 – 1999', '1991 – 1999');
 insert into University values ( 102 , 'The University of Texas Medical Branch at Galveston');
@@ -87,12 +85,10 @@ insert into Experience values ( 1 , 602, '2013-01-01', '');
 insert into Employer values ( 603 , 'Wake Forest University School of Medicine');
 insert into Experience values ( 1 , 603, '1999-07-01', '2014-12-15');
 
-http://www.linkedin.com/pub/bentley-d-graham-graham/85/b74/191?trk=pub-pbmap
 insert into User values ( 2 , 'bentley' , 'd graham graham', 0, 0, 'Machinery');
 insert into Employer values ( 604 , 'Nilfisk-Advance');
 insert into Experience values ( 2 , 604, '', '');
 
-http://www.linkedin.com/pub/ying-qian/10/b04/5a1?trk=pub-pbmap
 insert into User values ( 3 , 'Ying' , 'Qian', 58, 0, 'Pharmaceuticals');
 insert into Has_skill values ( 3 , 328, 0);
 insert into Skill values ( 328 , 'Drug Discovery');
@@ -131,43 +127,33 @@ insert into Groups values ( 415 , 'Biomarker Society', 0);
 insert into Employer values ( 605 , 'GlaxoSmithKline');
 insert into Experience values ( 3 , 605, '2002-01-01', '2014-12-12');
 
-http://www.linkedin.com/pub/tao-yin/32/575/551?trk=pub-pbmap
 insert into User values ( 4 , 'Tao' , 'Yin', 21, 0, 'Insurance');
 insert into Employer values ( 606 , 'MGIC');
 insert into Experience values ( 4 , 606, '', '');
 
-http://www.linkedin.com/pub/sherry-yang/6/a49/51b?trk=pub-pbmap
 insert into User values ( 5 , 'Sherry' , 'Yang', 2, 0, 'Education Management');
 insert into Employer values ( 607 , 'ISTP');
 insert into Experience values ( 5 , 607, '', '');
 
-http://www.linkedin.com/pub/ying-qian/b/689/b5b?trk=pub-pbmap
 
-http://www.linkedin.com/pub/sally-ng/29/276/292?trk=pub-pbmap
 insert into User values ( 6 , 'sally' , 'ng', 0, 0, 'Internet');
 insert into Employer values ( 608 , 'Tencent');
 insert into Experience values ( 6 , 608, '', '');
 
-http://www.linkedin.com/pub/jingyi-he/1b/a60/951?trk=pub-pbmap
 insert into User values ( 7 , 'jingyi' , 'he', 0, 0, '');
 insert into Education values ( 7 , 104 , 202 , '', '2006 – 2009', '2006 – 2009');
 insert into University values ( 104 , 'Florida State University');
 
-http://www.linkedin.com/pub/sally-ng/7/1a9/34a?trk=pub-pbmap
 insert into User values ( 8 , 'Sally' , 'Ng', 1, 0, 'E-Learning');
 insert into Education values ( 8 , 105 , 202 , '', '1994 – 2004', '1994 – 2004');
 insert into University values ( 105 , 'City University of New York-Hunter College');
 
-http://www.linkedin.com/pub/tao-yin/48/ab7/a20?trk=pub-pbmap
 
-http://www.linkedin.com/pub/yuan-geng/14/550/717?trk=pub-pbmap
 insert into User values ( 9 , 'Yuan' , 'Geng', 1, 0, 'Computer Software');
 insert into Education values ( 9 , 106 , 202 , '', '2008 – 2012', '2008 – 2012');
 insert into University values ( 106 , 'North Carolina State University');
 
-http://www.linkedin.com/pub/sally-ng/14/205/783?trk=pub-pbmap
 
-http://www.linkedin.com/pub/stella-cai/89/637/974?trk=pub-pbmap
 insert into User values ( 10 , 'Stella' , 'Cai', 20, 0, 'Translation and Localization');
 insert into Education values ( 10 , 107 , 200 , 'Masters Degree', '2013 – 2015 (expected)', '2013 – 2015 (expected)');
 insert into University values ( 107 , 'The Olivet University');
@@ -214,7 +200,6 @@ insert into Experience values ( 10 , 610, '2012-01-01', '');
 insert into Employer values ( 611 , 'Qinghuangdao Education');
 insert into Experience values ( 10 , 611, '2011-01-01', '');
 
-http://www.linkedin.com/pub/hui-bai/19/499/920?trk=pub-pbmap
 insert into User values ( 11 , 'Hui' , 'Bai', 500, 0, 'Financial Services');
 insert into Education values ( 11 , 109 , 204 , 'B.S.', '2008 – 2012', '2008 – 2012');
 insert into University values ( 109 , 'Lehigh University');
@@ -283,7 +268,6 @@ insert into Experience values ( 11 , 614, '2010-06-01', '2010-08-03');
 insert into Employer values ( 615 , 'Zhong Xing Energy Resource Investment Company');
 insert into Experience values ( 11 , 615, '2009-05-01', '2009-06-02');
 
-http://www.linkedin.com/pub/jill-fernandez/12/4b1/988?trk=pub-pbmap
 insert into User values ( 12 , 'Jill' , 'Fernandez', 255, 0, 'Financial Services');
 insert into Education values ( 12 , 112 , 205 , 'Master of Business Administration (MBA)', '2008 – 2010', '2008 – 2010');
 insert into University values ( 112 , 'Columbia University - Columbia Business School');
@@ -314,7 +298,6 @@ insert into Experience values ( 12 , 617, '2010-08-01', '2013-05-02');
 insert into Employer values ( 618 , 'Merrill Lynch');
 insert into Experience values ( 12 , 618, '2005-07-01', '2008-07-03');
 
-http://www.linkedin.com/pub/howard-dingle/10/7b8/809?trk=pub-pbmap
 insert into User values ( 13 , 'Howard' , 'Dingle', 500, 0, 'Financial Services');
 insert into Education values ( 13 , 114 , 202 , '', '2008 – 2010', '2008 – 2010');
 insert into University values ( 114 , 'University of Chicago Booth School of Business');
@@ -337,7 +320,6 @@ insert into Experience values ( 13 , 622, '2006-01-01', '');
 insert into Employer values ( 622 , 'Deloitte & Touche LLP');
 insert into Experience values ( 13 , 622, '2004-01-01', '');
 
-http://www.linkedin.com/pub/christopher-j-belcher/1/994/94a?trk=pub-pbmap
 insert into User values ( 14 , 'Christopher' , 'J. Belcher', 500, 0, 'Financial Services');
 insert into Education values ( 14 , 116 , 202 , '', '2005 – 2007', '2005 – 2007');
 insert into University values ( 116 , 'Cornell University - S.C. Johnson Graduate School of Management');
@@ -380,7 +362,6 @@ insert into Experience values ( 14 , 620, '2007-01-01', '');
 insert into Employer values ( 624 , 'Houlihan Lokey');
 insert into Experience values ( 14 , 624, '2003-01-01', '');
 
-http://www.linkedin.com/pub/priyanka-gandhi/21/b27/78b?trk=pub-pbmap
 insert into User values ( 15 , 'Priyanka' , 'Gandhi', 437, 0, 'Investment Banking');
 insert into Education values ( 15 , 119 , 206 , 'BBA', '2009 – 2013', '2009 – 2013');
 insert into University values ( 119 , 'Emory University - Goizueta Business School');
@@ -419,7 +400,6 @@ insert into Experience values ( 15 , 626, '2012-01-01', '2012-05-05');
 insert into Employer values ( 627 , 'CRE Secure');
 insert into Experience values ( 15 , 627, '2011-06-01', '2011-12-07');
 
-http://www.linkedin.com/pub/ashish-maskara/2/362/564?trk=pub-pbmap
 insert into User values ( 16 , 'Ashish' , 'Maskara', 500, 0, 'Investment Banking');
 insert into Has_skill values ( 16 , 346, 0);
 insert into Skill values ( 346 , 'Financial Modeling');
@@ -460,7 +440,6 @@ insert into Skill values ( 386 , 'Mergers');
 insert into Has_skill values ( 16 , 387, 0);
 insert into Skill values ( 387 , 'Risk Management');
 
-http://www.linkedin.com/pub/ian-stewart/29/b46/299?trk=pub-pbmap
 insert into User values ( 17 , 'Ian' , 'Stewart', 147, 0, 'Banking');
 insert into Education values ( 17 , 120 , 207 , 'B.A.', '2007 – 2011', '2007 – 2011');
 insert into University values ( 120 , 'Middlebury College');
@@ -489,7 +468,6 @@ insert into Experience values ( 17 , 629, '2010-06-01', '2010-08-03');
 insert into Employer values ( 630 , 'Broadpoint Gleacher');
 insert into Experience values ( 17 , 630, '2009-06-01', '2009-08-03');
 
-http://www.linkedin.com/pub/daniel-t-genis/35/621/99?trk=pub-pbmap
 insert into User values ( 18 , 'Daniel' , 'T Genis', 448, 0, 'Investment Banking');
 insert into Education values ( 18 , 121 , 208 , 'Bachelors of Science in Management', '2010 – 2014', '2010 – 2014');
 insert into University values ( 121 , 'Boston College - Carroll School of Management');
@@ -546,7 +524,6 @@ insert into Experience values ( 18 , 618, '2011-10-01', '2012-04-07');
 insert into Employer values ( 634 , 'J.Crew');
 insert into Experience values ( 18 , 634, '2010-03-01', '2012-01-01');
 
-http://www.linkedin.com/pub/manuel-dox/15/aaa/795?trk=pub-pbmap
 insert into User values ( 19 , 'Manuel' , 'Dox', 500, 0, 'Investment Banking');
 insert into Education values ( 19 , 123 , 210 , 'Bachelor of Science in Business Management', '2008 – 2012', '2008 – 2012');
 insert into University values ( 123 , 'Babson College');
@@ -619,7 +596,6 @@ insert into Experience values ( 19 , 636, '2011-05-01', '2012-05-01');
 insert into Employer values ( 637 , 'Barclays Capital');
 insert into Experience values ( 19 , 637, '2011-06-01', '2011-08-03');
 
-http://www.linkedin.com/pub/minh-le/20/691/582?trk=pub-pbmap
 insert into User values ( 20 , 'Minh' , 'Le', 500, 0, 'Investment Banking');
 insert into Education values ( 20 , 126 , 202 , '', '2009 – 2013', '2009 – 2013');
 insert into University values ( 126 , 'New York University');
@@ -642,7 +618,6 @@ insert into Experience values ( 20 , 638, '2012-06-01', '2012-08-03');
 insert into Employer values ( 639 , 'Institutional Life Services');
 insert into Experience values ( 20 , 639, '2011-04-01', '2011-10-07');
 
-http://www.linkedin.com/pub/michael-friedberg/35/a5/6a9?trk=pub-pbmap
 insert into User values ( 21 , 'Michael' , 'Friedberg', 324, 0, 'Financial Services');
 insert into Education values ( 21 , 119 , 212 , 'Bachelor of Business Administration', '2009 – 2013', '2009 – 2013');
 insert into University values ( 119 , 'Emory University - Goizueta Business School');
@@ -697,7 +672,6 @@ insert into Experience values ( 21 , 640, '2011-06-01', '2011-08-03');
 insert into Employer values ( 641 , 'Hersha Hospitality');
 insert into Experience values ( 21 , 641, '2010-06-01', '2010-08-03');
 
-http://www.linkedin.com/pub/quanquan-yang/19/653/780?trk=pub-pbmap
 insert into User values ( 22 , 'QuanQuan' , 'Yang', 500, 0, 'Investment Management');
 insert into Education values ( 22 , 128 , 213 , 'Bachelor of Science in Business, Cum Laude', '2008 – 2011', '2008 – 2011');
 insert into University values ( 128 , 'Indiana University - Kelley School of Business');
@@ -750,7 +724,6 @@ insert into Experience values ( 22 , 643, '2011-07-01', '2014-06-03');
 insert into Employer values ( 644 , 'Boston Scientific');
 insert into Experience values ( 22 , 644, '2010-05-01', '2010-08-04');
 
-http://www.linkedin.com/pub/yang-young-lu/30/7a3/427?trk=pub-pbmap
 insert into User values ( 23 , 'Yang' , '(Young) Lu', 452, 0, 'Financial Services');
 insert into Education values ( 23 , 128 , 203 , 'BS', '2009 – 2012', '2009 – 2012');
 insert into University values ( 128 , 'Indiana University - Kelley School of Business');
@@ -809,7 +782,6 @@ insert into Experience values ( 23 , 648, '2009-06-01', '2009-08-03');
 insert into Employer values ( 649 , 'Museum of Science and Industry');
 insert into Experience values ( 23 , 649, '2008-03-01', '2008-08-06');
 
-http://www.linkedin.com/pub/alice-zhou/42/653/93b?trk=pub-pbmap
 insert into User values ( 24 , 'Alice' , 'Zhou', 304, 0, 'Financial Services');
 insert into Education values ( 24 , 130 , 200 , 'Masters Degree', '2014 – 2015 (expected)', '2014 – 2015 (expected)');
 insert into University values ( 130 , 'Indiana University Bloomington');
@@ -880,7 +852,6 @@ insert into Experience values ( 24 , 650, '2012-01-01', '2012-05-05');
 insert into Employer values ( 654 , 'Industrial and Commercial Bank of China (ICBC) Financial Services LLC');
 insert into Experience values ( 24 , 654, '2011-06-01', '2011-09-04');
 
-http://www.linkedin.com/pub/yujia-molly-cheng/43/329/811?trk=pub-pbmap
 insert into User values ( 25 , 'Yujia' , '(Molly) Cheng', 245, 0, 'Accounting');
 insert into Education values ( 25 , 128 , 200 , 'Masters Degree', '2014 – 2015 (expected)', '2014 – 2015 (expected)');
 insert into University values ( 128 , 'Indiana University - Kelley School of Business');
@@ -981,7 +952,6 @@ insert into Experience values ( 25 , 659, '2012-03-01', '2012-03-01');
 insert into Employer values ( 653 , 'United Way of America');
 insert into Experience values ( 25 , 653, '2012-01-01', '2012-03-03');
 
-http://www.linkedin.com/pub/minnie-li/46/888/73a?trk=pub-pbmap
 insert into User values ( 26 , 'Minnie' , 'Li', 435, 0, 'Financial Services');
 insert into Education values ( 26 , 128 , 202 , '', '2010 – 2014', '2010 – 2014');
 insert into University values ( 128 , 'Indiana University - Kelley School of Business');
@@ -1000,7 +970,6 @@ insert into Languages values ( 506 , 'Mandarin');
 insert into Knows_language values ( 26 , 507);
 insert into Languages values ( 507 , 'Cantonese');
 
-http://www.linkedin.com/pub/xiaoyi-minnie-li/4b/585/2a1
 insert into User values ( 27 , 'Xiaoyi' , 'Minnie Li', 142, 0, 'Accounting');
 insert into Education values ( 27 , 133 , 216 , 'Bachelor of Commerce (B.Com.)', '2011 – 2012', '2011 – 2012');
 insert into University values ( 133 , 'National University of Ireland, Galway');
@@ -1049,7 +1018,6 @@ insert into Experience values ( 27 , 661, '2010-05-01', '2010-09-05');
 insert into Employer values ( 662 , 'Killarney Park Hotel');
 insert into Experience values ( 27 , 662, '2009-07-01', '2010-01-07');
 
-http://www.linkedin.com/pub/siyu-deng/70/95a/97b?trk=pub-pbmap
 insert into User values ( 28 , 'Siyu' , 'Deng', 70, 0, 'Computer Software');
 insert into Education values ( 28 , 135 , 218 , 'Master of Engineering Science (M.Eng.Sc.)', '2011 – 2012', '2011 – 2012');
 insert into University values ( 135 , 'University College Cork');
@@ -1100,7 +1068,6 @@ insert into Experience values ( 28 , 665, '2010-09-01', '2011-04-08');
 insert into Employer values ( 666 , 'HRLocker');
 insert into Experience values ( 28 , 666, '2010-04-01', '2010-08-05');
 
-http://www.linkedin.com/pub/patricia-finucane/a4/b17/b00?trk=pub-pbmap
 insert into User values ( 29 , 'Patricia' , 'Finucane', 65, 0, 'Higher Education');
 insert into Education values ( 29 , 135 , 220 , 'Bachelor of Arts (B.A.)', '1995 – 1998', '1995 – 1998');
 insert into University values ( 135 , 'University College Cork');
@@ -1161,7 +1128,6 @@ insert into Experience values ( 29 , 671, '1999-06-01', '1999-09-04');
 insert into Employer values ( 670 , 'City of Cork VEC');
 insert into Experience values ( 29 , 670, '1999-02-01', '1999-06-01');
 
-http://www.linkedin.com/pub/maria-o-brien/80/228/63?trk=pub-pbmap
 insert into User values ( 30 , 'Maria' , 'O Brien', 17, 0, 'Financial Services');
 insert into Education values ( 30 , 138 , 222 , 'Bachelor of Commerce (BCom)', '2011 – 2014', '2011 – 2014');
 insert into University values ( 138 , 'UCC, Univercity College Cork');
@@ -1180,7 +1146,6 @@ insert into Experience values ( 30 , 672, '2010-06-01', '2014-12-15');
 insert into Employer values ( 673 , 'Kudos Creative Company');
 insert into Experience values ( 30 , 673, '2007-07-01', '2009-11-02');
 
-http://www.linkedin.com/pub/liam-higgins/4b/68a/422?trk=pub-pbmap
 insert into User values ( 31 , 'Liam' , 'Higgins', 85, 0, 'Information Technology and Services');
 insert into Education values ( 31 , 135 , 225 , 'MBS Information Systems for Business Performance', '2013 – 2014', '2013 – 2014');
 insert into University values ( 135 , 'University College Cork');
@@ -1257,7 +1222,6 @@ insert into Experience values ( 31 , 676, '2009-06-01', '2010-09-01');
 insert into Employer values ( 677 , 'O Neils Bar, Midleton');
 insert into Experience values ( 31 , 677, '2008-05-01', '2008-09-05');
 
-http://www.linkedin.com/pub/kieran-mccarthy/6b/2a2/393?trk=pub-pbmap
 insert into User values ( 32 , 'Kieran' , 'McCarthy', 198, 0, 'Information Technology and Services');
 insert into Education values ( 32 , 135 , 200 , 'Masters Degree', '2013 – 2014', '2013 – 2014');
 insert into University values ( 135 , 'University College Cork');
@@ -1372,7 +1336,6 @@ insert into Experience values ( 32 , 678, '2005-05-01', '2013-07-08');
 insert into Employer values ( 679 , 'Musgrave Market Place');
 insert into Experience values ( 32 , 679, '2001-11-01', '2005-05-03');
 
-http://www.linkedin.com/pub/ian-healy/81/2b9/b63?trk=pub-pbmap
 insert into User values ( 33 , 'Ian' , 'Healy', 119, 0, '');
 insert into Education values ( 33 , 135 , 228 , 'Masters in Information Systems for Business Performance', '2013 – 2014', '2013 – 2014');
 insert into University values ( 135 , 'University College Cork');
@@ -1427,7 +1390,6 @@ insert into Experience values ( 33 , 681, '2012-07-01', '2012-12-06');
 insert into Employer values ( 669 , 'Cork County Council');
 insert into Experience values ( 33 , 669, '2007-10-01', '2009-01-01');
 
-http://www.linkedin.com/pub/arundathy-gireendran/76/931/290?trk=pub-pbmap
 insert into User values ( 34 , 'Arundathy' , 'Gireendran', 361, 0, 'Information Technology and Services');
 insert into Education values ( 34 , 135 , 229 , 'Masters degree', '2013 – 2014', '2013 – 2014');
 insert into University values ( 135 , 'University College Cork');
@@ -1486,7 +1448,6 @@ insert into Experience values ( 34 , 683, '2010-06-01', '2013-08-03');
 insert into Employer values ( 684 , 'Chitralaya School of Arts');
 insert into Experience values ( 34 , 684, '2007-01-01', '');
 
-http://www.linkedin.com/pub/sri-ranga-gopinath-koganti/58/12b/57?trk=pub-pbmap
 insert into User values ( 35 , 'Sri' , 'Ranga Gopinath koganti', 43, 0, 'Electrical/Electronic Manufacturing');
 insert into Education values ( 35 , 143 , 231 , 'Master of Engineering (MEng)', '2011 – 2012', '2011 – 2012');
 insert into University values ( 143 , 'Cork Institute of Technology');
@@ -1529,7 +1490,6 @@ insert into Languages values ( 511 , 'Hindi,Telugu, English.');
 insert into Employer values ( 685 , 'ODG Technologies');
 insert into Experience values ( 35 , 685, '2012-04-01', '2014-12-15');
 
-http://www.linkedin.com/pub/james-nagle/79/60a/4b2?trk=pub-pbmap
 insert into User values ( 36 , 'James' , 'Nagle', 186, 0, 'Information Technology and Services');
 insert into Education values ( 36 , 135 , 200 , 'Masters Degree', '2013 – 2014', '2013 – 2014');
 insert into University values ( 135 , 'University College Cork');
@@ -1562,12 +1522,10 @@ insert into Experience values ( 36 , 687, '2014-01-01', '');
 insert into Employer values ( 688 , 'Crypto Broker');
 insert into Experience values ( 36 , 688, '2013-11-01', '2014-12-15');
 
-http://www.linkedin.com/pub/cantillon-thomas/a8/b98/3b0?trk=pub-pbmap
 insert into User values ( 37 , 'Cantillon' , 'Thomas', 10, 0, 'Semiconductors');
 insert into Employer values ( 689 , 'Analog Devices');
 insert into Experience values ( 37 , 689, '', '');
 
-http://www.linkedin.com/pub/kieran-o-sullivan/90/7b6/939?trk=pub-pbmap
 insert into User values ( 38 , 'Kieran' , 'OSullivan', 107, 0, 'Accounting');
 insert into Education values ( 38 , 135 , 234 , 'Master of Arts (M.A.)', '2000 – 2005', '2000 – 2005');
 insert into University values ( 135 , 'University College Cork');
@@ -1634,7 +1592,6 @@ insert into Experience values ( 38 , 691, '2010-07-01', '2012-08-02');
 insert into Employer values ( 692 , 'CareChoice');
 insert into Experience values ( 38 , 692, '2009-04-01', '2010-04-01');
 
-http://www.linkedin.com/pub/jillian-o-driscoll/37/7ab/79a?trk=pub-pbmap
 insert into User values ( 39 , 'Jillian' , 'ODriscoll', 58, 0, 'Medical Practice');
 insert into Has_skill values ( 39 , 543, 0);
 insert into Skill values ( 543 , 'Podiatry');
@@ -1671,7 +1628,6 @@ insert into Groups values ( 522 , 'Podiatry Today', 0);
 insert into Employer values ( 693 , 'O'Driscoll's Podiatry');
 insert into Experience values ( 39 , 693, '', '');
 
-http://www.linkedin.com/pub/ian-drake/4/458/368?trk=pub-pbmap
 insert into User values ( 40 , 'Ian' , 'Drake', 179, 0, 'Information Technology and Services');
 insert into Education values ( 40 , 147 , 202 , '', '1976 – 1980', '1976 – 1980');
 insert into University values ( 147 , 'University of Surrey');
@@ -1690,7 +1646,6 @@ insert into Experience values ( 40 , 694, '', '');
 insert into Employer values ( 695 , 'IBM United Kingdom Ltd');
 insert into Experience values ( 40 , 695, '2012-01-01', '');
 
-http://www.linkedin.com/pub/daniel-suter/22/1b3/823?trk=pub-pbmap
 insert into User values ( 41 , 'Daniel' , 'Suter', 199, 0, 'Investment Management');
 insert into Education values ( 41 , 148 , 235 , 'Dr. sc. nat.', '1974 – 1981', '1974 – 1981');
 insert into University values ( 148 , 'Eidgenössische Technische Hochschule Zürich');
@@ -1725,7 +1680,6 @@ insert into Experience values ( 41 , 698, '2001-01-01', '');
 insert into Employer values ( 699 , 'PerkinElmer');
 insert into Experience values ( 41 , 699, '1984-01-01', '');
 
-http://www.linkedin.com/pub/sarah-o-halloran/9a/53/728?trk=pub-pbmap
 insert into User values ( 42 , 'Sarah' , 'OHalloran', 138, 0, 'Financial Services');
 insert into Education values ( 42 , 149 , 202 , '', '', '');
 insert into University values ( 149 , 'York University');
@@ -1742,7 +1696,6 @@ insert into Experience values ( 42 , 701, '2009-01-01', '');
 insert into Employer values ( 702 , 'KPMG Australia');
 insert into Experience values ( 42 , 702, '2008-01-01', '');
 
-http://www.linkedin.com/pub/noah-j-kramer/23/967/66b?trk=pub-pbmap
 insert into User values ( 43 , 'Noah' , 'J. Kramer', 500, 0, 'Investment Management');
 insert into Education values ( 43 , 150 , 202 , '', '', '');
 insert into University values ( 150 , 'University of Pennsylvania');
@@ -1787,7 +1740,6 @@ insert into Experience values ( 43 , 704, '2009-01-01', '');
 insert into Employer values ( 705 , 'Goldman, Sachs & Co.');
 insert into Experience values ( 43 , 705, '2002-01-01', '');
 
-http://www.linkedin.com/pub/dmitry-bourtov/3/2ba/174?trk=pub-pbmap
 insert into User values ( 44 , 'Dmitry' , 'Bourtov', 436, 0, 'Financial Services');
 insert into Has_skill values ( 44 , 358, 0);
 insert into Skill values ( 358 , 'Trading');
@@ -1894,7 +1846,6 @@ insert into Languages values ( 501 , 'English');
 insert into Knows_language values ( 44 , 515);
 insert into Languages values ( 515 , 'Russian');
 
-http://www.linkedin.com/pub/alexander-kulagin/1/b6a/400?trk=pub-pbmap
 insert into User values ( 45 , 'Alexander' , 'Kulagin', 500, 0, 'Real Estate');
 insert into Has_skill values ( 45 , 602, 0);
 insert into Skill values ( 602 , 'Property Management');
@@ -2097,7 +2048,6 @@ insert into Experience values ( 45 , 716, '2001-02-01', '2002-07-01');
 insert into Employer values ( 717 , 'Parliament of Russian Federation - State Duma');
 insert into Experience values ( 45 , 717, '1998-05-01', '1998-10-06');
 
-http://www.linkedin.com/pub/irina-zharova-wright/10/184/702?trk=pub-pbmap
 insert into User values ( 46 , 'Irina' , 'Zharova-Wright', 500, 0, 'Real Estate');
 insert into Education values ( 46 , 152 , 202 , '', '2008 – 2009', '2008 – 2009');
 insert into University values ( 152 , 'Finance University under the Government of the Russian Federation');
@@ -2254,7 +2204,6 @@ insert into Experience values ( 46 , 718, '2006-08-01', '2014-12-15');
 insert into Employer values ( 719 , 'M-Capital Merchant Bank');
 insert into Experience values ( 46 , 719, '2006-06-01', '2014-12-15');
 
-http://www.linkedin.com/pub/andrey-nesterenko/0/256/b28?trk=pub-pbmap
 insert into User values ( 47 , 'Andrey' , 'Nesterenko', 500, 0, 'Construction');
 insert into Has_skill values ( 47 , 370, 0);
 insert into Skill values ( 370 , 'Corporate Finance');
@@ -2331,7 +2280,6 @@ insert into Experience values ( 47 , 725, '2000-01-01', '');
 insert into Employer values ( 726 , 'KPMG');
 insert into Experience values ( 47 , 726, '1997-01-01', '');
 
-http://www.linkedin.com/pub/zufar-chukiev/60/849/289?trk=pub-pbmap
 insert into User values ( 48 , 'Zufar' , 'Chukiev', 9, 0, 'Construction');
 insert into Education values ( 48 , 154 , 202 , '', '2001 – 2003', '2001 – 2003');
 insert into University values ( 154 , 'АНХ г.Москва');
@@ -2372,7 +2320,6 @@ insert into Skill values ( 650 , 'Negotiation');
 insert into Employer values ( 727 , 'ГлавСтрой');
 insert into Experience values ( 48 , 727, '2006-12-01', '2014-12-15');
 
-http://www.linkedin.com/pub/%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80-%D0%B3%D1%83%D0%BD%D1%8C%D0%BA%D0%B8%D0%BD/56/300/44a?trk=pub-pbmap
 insert into User values ( 49 , 'Александр' , 'Гунькин', 500, 0, 'Construction');
 insert into Education values ( 49 , 156 , 236 , 'психолог', '1990 – 1991', '1990 – 1991');
 insert into University values ( 156 , 'Ленинградский университет');
@@ -2429,7 +2376,6 @@ insert into Experience values ( 49 , 731, '2003-12-01', '2010-09-06');
 insert into Employer values ( 732 , 'Компания СОЛО');
 insert into Experience values ( 49 , 732, '2002-02-01', '2003-08-01');
 
-http://www.linkedin.com/pub/ivan-bogatov/34/494/147?trk=pub-pbmap
 insert into User values ( 50 , 'Ivan' , 'Bogatov', 199, 0, 'Real Estate');
 insert into Member_of values ( 50 , 546);
 insert into Groups values ( 546 , 'Russia & CIS Real Estate', 0);
@@ -2450,7 +2396,6 @@ insert into Experience values ( 50 , 735, '2009-06-01', '2010-03-10');
 insert into Employer values ( 736 , 'Urban Group');
 insert into Experience values ( 50 , 736, '2005-11-01', '2009-03-03');
 
-http://www.linkedin.com/pub/nikolay-deviatilov/0/839/64?trk=pub-pbmap
 insert into User values ( 51 , 'Nikolay' , 'Deviatilov', 500, 0, 'Real Estate');
 insert into Has_skill values ( 51 , 606, 0);
 insert into Skill values ( 606 , 'Real Estate');
@@ -2549,7 +2494,6 @@ insert into Languages values ( 512 , 'German');
 insert into Knows_language values ( 51 , 501);
 insert into Languages values ( 501 , 'English');
 
-http://www.linkedin.com/pub/%D0%BD%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D0%B9-%D0%B4%D0%B0%D0%BB%D0%B5%D0%B2%D0%B8%D1%87/56/46b/716?trk=pub-pbmap
 insert into User values ( 52 , 'Николай' , 'Далевич', 100, 0, 'Real Estate');
 insert into Education values ( 52 , 158 , 238 , 'инженер-экономист', '1994 – 1999', '1994 – 1999');
 insert into University values ( 158 , 'Московский Авиационный Институт (Государственный Технический Университет) (МАИ)');
@@ -2622,7 +2566,6 @@ insert into Experience values ( 52 , 739, '2011-06-01', '2012-02-09');
 insert into Employer values ( 740 , 'ООО "Аксис Девелопмент"');
 insert into Experience values ( 52 , 740, '2008-11-01', '2010-11-02');
 
-http://www.linkedin.com/pub/andrey-stolyarov/5b/4a5/b18?trk=pub-pbmap
 insert into User values ( 53 , 'Andrey' , 'Stolyarov', 181, 0, 'Construction');
 insert into Education values ( 53 , 160 , 240 , 'Инженер-строитель', '2000 – 2003', '2000 – 2003');
 insert into University values ( 160 , 'Московский Институт Коммунального Хозяйства и Строительства / Moscow Institute of Municipal Economy and Construction');
@@ -2659,7 +2602,6 @@ insert into Experience values ( 53 , 743, '2009-08-01', '2011-09-02');
 insert into Employer values ( 744 , 'АМО ЗИЛ');
 insert into Experience values ( 53 , 744, '2000-01-01', '2009-08-09');
 
-http://www.linkedin.com/pub/%D0%BE%D0%BB%D0%B5%D0%B3-%D1%87%D0%B5%D1%80%D0%BD%D0%B0%D0%B2%D0%B8%D0%BD/63/850/9aa?trk=pub-pbmap
 insert into User values ( 54 , 'Олег' , 'Чернавин', 51, 0, 'Construction');
 insert into Education values ( 54 , 162 , 240 , 'Инженер-строитель', '1996 – 2001', '1996 – 2001');
 insert into University values ( 162 , 'Ульяновский Государственный Технический Университет / Ulyanovsk State Technical University');
@@ -2700,7 +2642,6 @@ insert into Experience values ( 54 , 746, '2007-05-01', '2010-07-03');
 insert into Employer values ( 747 , 'ООО "Градострой"');
 insert into Experience values ( 54 , 747, '2006-09-01', '2007-05-09');
 
-http://www.linkedin.com/pub/%D0%B8%D0%B3%D0%BE%D1%80%D1%8C-%D0%BC%D0%B0%D0%BB%D1%8B%D1%88%D0%B5%D0%B2/62/566/71?trk=pub-pbmap
 insert into User values ( 55 , 'Игорь' , 'Малышев', 500, 0, 'Construction');
 insert into Education values ( 55 , 163 , 202 , '', '2000 – 2004', '2000 – 2004');
 insert into University values ( 163 , 'Ставропольский Институт им. В.Д. Чурсина');
@@ -2787,7 +2728,6 @@ insert into Experience values ( 55 , 749, '2011-11-01', '2013-04-01');
 insert into Employer values ( 750 , 'ООО "РУНД-СК"');
 insert into Experience values ( 55 , 750, '2012-01-01', '2013-02-01');
 
-http://www.linkedin.com/pub/sergey-gogolev/9/154/798?trk=pub-pbmap
 insert into User values ( 56 , 'Sergey' , 'Gogolev', 336, 0, 'Commercial Real Estate');
 insert into Education values ( 56 , 164 , 242 , 'Ph.D', '2007 – 2009', '2007 – 2009');
 insert into University values ( 164 , 'State Academy of Construction');
@@ -2856,7 +2796,6 @@ insert into Experience values ( 56 , 755, '2007-10-01', '2010-05-02');
 insert into Employer values ( 756 , 'MEGA-IKEA');
 insert into Experience values ( 56 , 756, '2004-08-01', '2007-09-03');
 
-http://www.linkedin.com/pub/grigoriy-nekrasov/11/371/188?trk=pub-pbmap
 insert into User values ( 57 , 'Grigoriy' , 'Nekrasov', 500, 0, 'Real Estate');
 insert into Education values ( 57 , 168 , 229 , 'Masters degree', '2001 – 2006', '2001 – 2006');
 insert into University values ( 168 , 'Omsk State University (OSU)');
@@ -2921,7 +2860,6 @@ insert into Experience values ( 57 , 758, '2004-01-01', '2008-02-04');
 insert into Employer values ( 758 , 'F-Consulting Group');
 insert into Experience values ( 57 , 758, '2002-03-01', '2004-01-01');
 
-http://www.linkedin.com/pub/olga-mashkova/37/230/261?trk=pub-pbmap
 insert into User values ( 58 , 'Olga' , 'Mashkova', 500, 0, 'Real Estate');
 insert into Education values ( 58 , 169 , 246 , 'Бакалавр', '2003 – 2008', '2003 – 2008');
 insert into University values ( 169 , 'МАТИ РГТУ им. Циолковского');
@@ -2944,7 +2882,6 @@ insert into Experience values ( 58 , 760, '2009-02-01', '2014-12-11');
 insert into Employer values ( 761 , 'Century 21');
 insert into Experience values ( 58 , 761, '2007-04-01', '2009-10-02');
 
-http://www.linkedin.com/pub/aleksandra-yurchenko/2a/a64/374?trk=pub-pbmap
 insert into User values ( 59 , 'Aleksandra' , 'Yurchenko', 500, 0, 'Real Estate');
 insert into Education values ( 59 , 171 , 247 , 'Master of Science (MSc)', '2013 – 2014', '2013 – 2014');
 insert into University values ( 171 , 'Cass Business School');
@@ -2967,9 +2904,7 @@ insert into Experience values ( 59 , 764, '2010-03-01', '2010-06-04');
 insert into Employer values ( 765 , 'Best-Nedvizhimost');
 insert into Experience values ( 59 , 765, '2008-10-01', '2010-03-01');
 
-http://www.linkedin.com/pub/aleksandra-yurchenko/a9/88b/a03
 
-http://www.linkedin.com/pub/james-erb/1/b6/90b?trk=pub-pbmap
 insert into User values ( 60 , 'James' , 'Erb', 500, 0, 'Information Technology and Services');
 insert into Education values ( 60 , 132 , 250 , 'Ph.D.', '1996', '1996');
 insert into University values ( 132 , 'University of California, Berkeley');
@@ -3058,7 +2993,6 @@ insert into Experience values ( 60 , 771, '1999-01-01', '');
 insert into Employer values ( 772 , 'University of Oregon');
 insert into Experience values ( 60 , 772, '1996-01-01', '');
 
-http://www.linkedin.com/pub/lucinda-newcomb/0/521/4b5?trk=pub-pbmap
 insert into User values ( 61 , 'Lucinda' , 'Newcomb', 500, 0, 'Internet');
 insert into Education values ( 61 , 176 , 251 , 'BA', '1990 – 1994', '1990 – 1994');
 insert into University values ( 176 , 'Swarthmore College');
@@ -3125,7 +3059,6 @@ insert into Experience values ( 61 , 780, '1995-01-01', '');
 insert into Employer values ( 781 , 'U.S. Treasury');
 insert into Experience values ( 61 , 781, '1994-01-01', '');
 
-http://www.linkedin.com/pub/kathy-rott/1/398/a65?trk=pub-pbmap
 insert into User values ( 62 , 'Kathy' , 'Rott', 500, 0, 'Internet');
 insert into Education values ( 62 , 177 , 202 , '', 'September 1988 – 1991', 'September 1988 – 1991');
 insert into University values ( 177 , 'Yale University');
@@ -3220,7 +3153,6 @@ insert into Experience values ( 62 , 788, '1996-01-01', '');
 insert into Employer values ( 789 , 'The HyperMedia Group');
 insert into Experience values ( 62 , 789, '1993-01-01', '');
 
-http://www.linkedin.com/pub/bridget-dolan/1/9b4/75a?trk=pub-pbmap
 insert into User values ( 63 , 'Bridget' , 'Dolan', 500, 0, 'Cosmetics');
 insert into Has_skill values ( 63 , 758, 0);
 insert into Skill values ( 758 , 'Mobile Marketing');
@@ -3261,7 +3193,6 @@ insert into Skill values ( 762 , 'Cosmetics');
 insert into Has_skill values ( 63 , 739, 0);
 insert into Skill values ( 739 , 'Online Advertising');
 
-http://www.linkedin.com/pub/cathy-choi/0/476/502?trk=pub-pbmap
 insert into User values ( 64 , 'Cathy' , 'Choi', 500, 0, 'Online Media');
 insert into Education values ( 64 , 179 , 251 , 'BA', 'June 1995 – December 1999', 'June 1995 – December 1999');
 insert into University values ( 179 , 'University of California, Santa Barbara');
@@ -3306,7 +3237,6 @@ insert into Experience values ( 64 , 792, '2003-12-01', '2004-10-11');
 insert into Employer values ( 792 , 'TerraLycos');
 insert into Experience values ( 64 , 792, '2002-10-01', '2003-12-01');
 
-http://www.linkedin.com/pub/kelly-coller/4/2a5/638?trk=pub-pbmap
 insert into User values ( 65 , 'Kelly' , 'Coller', 500, 0, 'Retail');
 insert into Education values ( 65 , 181 , 252 , 'Certification from School of Architecture', '2003 – 2004', '2003 – 2004');
 insert into University values ( 181 , 'University of Washington');
@@ -3349,7 +3279,6 @@ insert into Experience values ( 65 , 797, '1998-01-01', '');
 insert into Employer values ( 798 , 'Pilchuck Glass School');
 insert into Experience values ( 65 , 798, '1995-01-01', '');
 
-http://www.linkedin.com/pub/marcy-zelmar/7/414/714?trk=pub-pbmap
 insert into User values ( 66 , 'Marcy' , 'Zelmar', 305, 0, 'Retail');
 insert into Education values ( 66 , 130 , 202 , '', '1987 – 1991', '1987 – 1991');
 insert into University values ( 130 , 'Indiana University Bloomington');
@@ -3372,7 +3301,6 @@ insert into Experience values ( 66 , 799, '1997-01-01', '');
 insert into Employer values ( 800 , 'Corbis');
 insert into Experience values ( 66 , 800, '1993-01-01', '');
 
-http://www.linkedin.com/pub/danny-sullivan/1/240/4b9?trk=pub-pbmap
 insert into User values ( 67 , 'Danny' , 'Sullivan', 500, 0, 'Internet');
 insert into Education values ( 67 , 185 , 202 , '', '2008 – 2010', '2008 – 2010');
 insert into University values ( 185 , 'University of Pennsylvania - The Wharton School');
@@ -3441,7 +3369,6 @@ insert into Experience values ( 67 , 806, '1997-05-01', '2000-02-02');
 insert into Employer values ( 807 , 'The Main Quad');
 insert into Experience values ( 67 , 807, '1995-01-01', '');
 
-http://www.linkedin.com/pub/deborah-yeh/1/35/575?trk=pub-pbmap
 insert into User values ( 68 , 'Deborah' , 'Yeh', 500, 0, 'Marketing and Advertising');
 insert into Education values ( 68 , 186 , 202 , '', '', '');
 insert into University values ( 186 , 'Harvard University');
@@ -3472,7 +3399,6 @@ insert into Skill values ( 764 , 'Public Relations');
 insert into Employer values ( 766 , 'Sephora');
 insert into Experience values ( 68 , 766, '2012-07-01', '2014-12-15');
 
-http://www.linkedin.com/pub/mary-beth-laughton/5/a7b/270?trk=pub-pbmap
 insert into User values ( 69 , 'Mary' , 'Beth Laughton', 500, 0, 'Retail');
 insert into Education values ( 69 , 187 , 243 , 'MBA', '', '');
 insert into University values ( 187 , 'Harvard Business School');
@@ -3541,7 +3467,6 @@ insert into Experience values ( 69 , 808, '2004-01-01', '');
 insert into Employer values ( 809 , 'McKinsey & Company');
 insert into Experience values ( 69 , 809, '1999-01-01', '');
 
-http://www.linkedin.com/pub/johnna-marcus/0/5b4/4a1?trk=pub-pbmap
 insert into User values ( 70 , 'Johnna' , 'Marcus', 500, 0, 'Cosmetics');
 insert into Education values ( 70 , 181 , 215 , 'Bachelors Degree', '1994 – 1998', '1994 – 1998');
 insert into University values ( 181 , 'University of Washington');
@@ -3650,7 +3575,6 @@ insert into Groups values ( 651 , 'Mobile Marketing & Advertising', 0);
 insert into Member_of values ( 70 , 652);
 insert into Groups values ( 652 , 'Casinos and Gambling in Asia network', 0);
 insert into Member_of values ( 70 , 653);
-insert into Groups values ( 653 , 'CASINO & GAMBLING EXECUTIVES -http://www.casinoexecutivenetwork.com', 0);
 insert into Member_of values ( 70 , 654);
 insert into Groups values ( 654 , 'Mobile Commerce Forum', 0);
 insert into Member_of values ( 70 , 655);
@@ -3694,10 +3618,8 @@ insert into Experience values ( 70 , 812, '2002-01-01', '');
 insert into Employer values ( 813 , 'Sapient');
 insert into Experience values ( 70 , 813, '1998-01-01', '');
 
-http://www.linkedin.com/pub/tiffany-lei/0/ab3/86?trk=pub-pbmap
 insert into User values ( 71 , 'Tiffany' , 'Lei', 422, 0, 'Retail');
 
-http://www.linkedin.com/pub/lindsay-chastain/7/7a9/417?trk=pub-pbmap
 insert into User values ( 72 , 'Lindsay' , 'Chastain', 500, 0, 'Marketing and Advertising');
 insert into Education values ( 72 , 189 , 203 , 'BS', '2002 – 2007', '2002 – 2007');
 insert into University values ( 189 , 'The Ohio State University');
@@ -3812,7 +3734,6 @@ insert into Experience values ( 72 , 814, '2008-04-01', '2010-01-01');
 insert into Employer values ( 814 , 'The Limited');
 insert into Experience values ( 72 , 814, '2007-09-01', '2008-04-08');
 
-http://www.linkedin.com/pub/julie-bornstein/9/39a/981?trk=pub-pbmap
 insert into User values ( 73 , 'Julie' , 'Bornstein', 500, 0, 'Retail');
 insert into Education values ( 73 , 186 , 251 , 'BA', '1988 – 1992', '1988 – 1992');
 insert into University values ( 186 , 'Harvard University');
@@ -3839,7 +3760,6 @@ insert into Experience values ( 73 , 819, '1998-01-01', '');
 insert into Employer values ( 820 , 'Robertson Stephens');
 insert into Experience values ( 73 , 820, '1997-01-01', '');
 
-http://www.linkedin.com/pub/sharon-rothstein/10/512/393?trk=pub-pbmap
 insert into User values ( 74 , 'Sharon' , 'Rothstein', 376, 0, 'Retail');
 insert into Education values ( 74 , 190 , 243 , 'MBA', '1982 – 1984', '1982 – 1984');
 insert into University values ( 190 , 'UCLA Anderson School of Management');
@@ -3858,7 +3778,6 @@ insert into Experience values ( 74 , 825, '1997-01-01', '');
 insert into Employer values ( 826 , 'Nabisco Biscuit Company');
 insert into Experience values ( 74 , 826, '1987-01-01', '');
 
-http://www.linkedin.com/pub/curt-garner/4/476/689?trk=pub-pbmap
 insert into User values ( 75 , 'Curt' , 'Garner', 500, 0, 'Information Technology and Services');
 insert into Education values ( 75 , 189 , 251 , 'BA', '1987 – 1991', '1987 – 1991');
 insert into University values ( 189 , 'The Ohio State University');
@@ -3927,7 +3846,6 @@ insert into Experience values ( 75 , 819, '1998-01-01', '2002-12-05');
 insert into Employer values ( 828 , 'Wendys Inc');
 insert into Experience values ( 75 , 828, '1992-01-01', '');
 
-http://www.linkedin.com/pub/david-courtright/4/318/564?trk=pub-pbmap
 insert into User values ( 76 , 'David' , 'Courtright', 416, 0, 'Retail');
 insert into Education values ( 76 , 191 , 202 , '', '', '');
 insert into University values ( 191 , 'Upland High School');
@@ -4004,7 +3922,6 @@ insert into Experience values ( 76 , 829, '2003-02-01', '2011-01-08');
 insert into Employer values ( 830 , 'NextCard Inc.');
 insert into Experience values ( 76 , 830, '1998-01-01', '2002-08-04');
 
-http://www.linkedin.com/pub/arun-tirumale/3/8ab/8bb?trk=pub-pbmap
 insert into User values ( 77 , 'Arun' , 'Tirumale', 500, 0, 'Computer Software');
 insert into Education values ( 77 , 192 , 255 , 'Certification - Leadership Development Program', '2013 – 2013', '2013 – 2013');
 insert into University values ( 192 , 'Center for Creative Leadership, San Diego');
@@ -4177,7 +4094,6 @@ insert into Experience values ( 77 , 834, '2001-06-01', '2002-02-09');
 insert into Employer values ( 835 , 'Motorola India Ltd');
 insert into Experience values ( 77 , 835, '1998-07-01', '2001-05-02');
 
-http://www.linkedin.com/pub/jayabindu-singh/2/bab/4a9?trk=pub-pbmap
 insert into User values ( 78 , 'Jayabindu' , 'Singh', 398, 0, 'Logistics and Supply Chain');
 insert into Has_skill values ( 78 , 536, 0);
 insert into Skill values ( 536 , 'Oracle Applications');
@@ -4206,7 +4122,6 @@ insert into Skill values ( 843 , 'Solution Architecture');
 insert into Has_skill values ( 78 , 565, 0);
 insert into Skill values ( 565 , 'Software Project...');
 
-http://www.linkedin.com/pub/brad-ackerman/8/460/630?trk=pub-pbmap
 insert into User values ( 79 , 'Brad' , 'Ackerman', 1, 0, 'Retail');
 insert into Education values ( 79 , 197 , 259 , 'Bachelor of Arts (B.A.) in Systems Analysis and Management', '1979 – 1983', '1979 – 1983');
 insert into University values ( 197 , 'University of Puget Sound');
@@ -4231,14 +4146,12 @@ insert into Skill values ( 465 , 'Retail');
 insert into Employer values ( 819 , 'Starbucks Coffee Company');
 insert into Experience values ( 79 , 819, '', '');
 
-http://www.linkedin.com/pub/paula-hills/6/290/4?trk=pub-pbmap
 insert into User values ( 80 , 'Paula' , 'Hills', 36, 0, 'Retail');
 insert into Education values ( 80 , 198 , 202 , '', '1978 – 1980', '1978 – 1980');
 insert into University values ( 198 , 'State University of New York College at Potsdam');
 insert into Employer values ( 819 , 'Starbucks Coffee Company');
 insert into Experience values ( 80 , 819, '', '');
 
-http://www.linkedin.com/pub/tim-carter/0/b86/90?trk=pub-pbmap
 insert into User values ( 81 , 'Tim' , 'Carter', 200, 0, 'Information Technology and Services');
 insert into Has_skill values ( 81 , 803, 0);
 insert into Skill values ( 803 , 'SDLC');
@@ -4249,7 +4162,6 @@ insert into Skill values ( 377 , 'Product Management');
 insert into Has_skill values ( 81 , 846, 0);
 insert into Skill values ( 846 , 'Data Warehousing');
 
-http://www.linkedin.com/pub/christa-mcbryan/2/b09/681?trk=pub-pbmap
 insert into User values ( 82 , 'Christa' , 'McBryan', 28, 0, 'Retail');
 insert into Has_skill values ( 82 , 465, 0);
 insert into Skill values ( 465 , 'Retail');
@@ -4292,7 +4204,6 @@ insert into Skill values ( 743 , 'SEO');
 insert into Has_skill values ( 82 , 494, 0);
 insert into Skill values ( 494 , 'Strategy');
 
-http://www.linkedin.com/pub/barbara-spiering/1/63/676?trk=pub-pbmap
 insert into User values ( 83 , 'Barbara' , 'Spiering', 306, 0, 'Retail');
 insert into Has_skill values ( 83 , 541, 0);
 insert into Skill values ( 541 , 'Process Improvement');
@@ -4349,7 +4260,6 @@ insert into Skill values ( 849 , 'Agile Project Management');
 insert into Has_skill values ( 83 , 779, 0);
 insert into Skill values ( 779 , 'IT Strategy');
 
-http://www.linkedin.com/pub/ramesh-ganesh/3/7a9/375?trk=pub-pbmap
 insert into User values ( 84 , 'Ramesh' , 'Ganesh', 500, 0, 'Retail');
 insert into Education values ( 84 , 199 , 260 , 'EMBA', '2007 – 2009', '2007 – 2009');
 insert into University values ( 199 , 'University of Southern California - Marshall School of Business');
@@ -4490,7 +4400,6 @@ insert into Experience values ( 84 , 838, '1992-07-01', '1996-04-03');
 insert into Employer values ( 839 , 'TCS');
 insert into Experience values ( 84 , 839, '1990-05-01', '1991-08-01');
 
-http://www.linkedin.com/pub/chris-halstead/0/ba4/44b?trk=pub-pbmap
 insert into User values ( 85 , 'Chris' , 'Halstead', 500, 0, 'Information Technology and Services');
 insert into Has_skill values ( 85 , 564, 0);
 insert into Skill values ( 564 , 'Agile Methodologies');
@@ -4561,7 +4470,6 @@ insert into Skill values ( 807 , 'Security');
 insert into Has_skill values ( 85 , 808, 0);
 insert into Skill values ( 808 , 'Disaster Recovery');
 
-http://www.linkedin.com/pub/sid-wang/0/b28/818?trk=pub-pbmap
 insert into User values ( 86 , 'Sid' , 'Wang', 500, 0, 'Information Technology and Services');
 insert into Education values ( 86 , 202 , 203 , 'BS', '', '');
 insert into University values ( 202 , 'Gonzaga University');
@@ -4756,7 +4664,6 @@ insert into Experience values ( 86 , 840, '1994-06-01', '1997-06-03');
 insert into Employer values ( 841 , 'Caelus, Inc.');
 insert into Experience values ( 86 , 841, '1988-06-01', '1994-06-06');
 
-http://www.linkedin.com/pub/dave-estlick/0/597/9b?trk=pub-pbmap
 insert into User values ( 87 , 'Dave' , 'Estlick', 500, 0, 'Computer & Network Security');
 insert into Has_skill values ( 87 , 878, 0);
 insert into Skill values ( 878 , 'Microsoft SQL Server');
@@ -4779,7 +4686,6 @@ insert into Skill values ( 884 , 'CISSP');
 insert into Has_skill values ( 87 , 885, 0);
 insert into Skill values ( 885 , 'Information Security...');
 
-http://www.linkedin.com/pub/cedric-chenal/5/202/106?trk=pub-pbmap
 insert into User values ( 88 , 'Cedric' , 'Chenal', 500, 0, 'Computer Software');
 insert into Education values ( 88 , 203 , 263 , 'Masters', '1994 – 1998', '1994 – 1998');
 insert into University values ( 203 , 'Ecole Supérieure des Procédés Electroniques et Optiques');
@@ -4892,7 +4798,6 @@ insert into Experience values ( 88 , 845, '1997-01-01', '');
 insert into Employer values ( 846 , 'L.M. Informatique Reims');
 insert into Experience values ( 88 , 846, '1990-01-01', '');
 
-http://www.linkedin.com/pub/david-bell/3/2a1/a27?trk=pub-pbmap
 insert into User values ( 89 , 'David' , 'Bell', 500, 0, 'Information Technology and Services');
 insert into Has_skill values ( 89 , 776, 0);
 insert into Skill values ( 776 , 'Vendor Management');
@@ -4989,7 +4894,6 @@ insert into Experience values ( 89 , 847, '1998-01-01', '');
 insert into Employer values ( 848 , 'AT&T*');
 insert into Experience values ( 89 , 848, '1998-01-01', '');
 
-http://www.linkedin.com/pub/chris-boyle/b/138/383?trk=pub-pbmap
 insert into User values ( 90 , 'Chris' , 'Boyle', 500, 0, 'Retail');
 insert into Has_skill values ( 90 , 776, 0);
 insert into Skill values ( 776 , 'Vendor Management');
@@ -5134,7 +5038,6 @@ insert into Experience values ( 90 , 850, '1992-02-01', '');
 insert into Employer values ( 851 , 'AT&T');
 insert into Experience values ( 90 , 851, '1988-11-01', '1992-02-03');
 
-http://www.linkedin.com/pub/susan-forney/0/a78/429?trk=pub-pbmap
 insert into User values ( 91 , 'Susan' , 'Forney', 500, 0, 'Computer Networking');
 insert into Has_skill values ( 91 , 813, 0);
 insert into Skill values ( 813 , 'SharePoint');
@@ -5219,7 +5122,6 @@ insert into Skill values ( 817 , 'Enterprise Software');
 insert into Knows_language values ( 91 , 503);
 insert into Languages values ( 503 , 'Spanish');
 
-http://www.linkedin.com/pub/kit-heinrichs/1/1b2/a48?trk=pub-pbmap
 insert into User values ( 92 , 'Kit' , 'Heinrichs', 421, 0, 'Information Technology and Services');
 insert into Has_skill values ( 92 , 875, 0);
 insert into Skill values ( 875 , 'Microsoft Technologies');
@@ -5322,7 +5224,6 @@ insert into Skill values ( 443 , 'Databases');
 insert into Has_skill values ( 92 , 855, 0);
 insert into Skill values ( 855 , 'Servers');
 
-http://www.linkedin.com/pub/james-wang/9/343/130?trk=pub-pbmap
 insert into User values ( 93 , 'James' , 'Wang', 500, 0, 'Computer Networking');
 insert into Education values ( 93 , 207 , 245 , 'Master', '1992 – 1995', '1992 – 1995');
 insert into University values ( 207 , 'Beijing Institute of Technology');
@@ -5517,7 +5418,6 @@ insert into Experience values ( 93 , 856, '2008-02-01', '2009-10-01');
 insert into Employer values ( 857 , 'Nexus IS');
 insert into Experience values ( 93 , 857, '2005-08-01', '2008-02-02');
 
-http://www.linkedin.com/pub/kirk-moore/3/269/455?trk=pub-pbmap
 insert into User values ( 94 , 'Kirk' , 'Moore', 320, 0, 'Computer Networking');
 insert into Has_skill values ( 94 , 974, 0);
 insert into Skill values ( 974 , 'F5');
@@ -5620,7 +5520,6 @@ insert into Skill values ( 497 , 'Visio');
 insert into Has_skill values ( 94 , 926, 0);
 insert into Skill values ( 926 , 'Network Engineering');
 
-http://www.linkedin.com/pub/matthew-mohan/5/298/2a3?trk=pub-pbmap
 insert into User values ( 95 , 'Matthew' , 'Mohan', 500, 0, 'Telecommunications');
 insert into Has_skill values ( 95 , 807, 0);
 insert into Skill values ( 807 , 'Security');
@@ -5743,9 +5642,7 @@ insert into Experience values ( 95 , 868, '1995-05-01', '2000-05-05');
 insert into Employer values ( 868 , 'New York City Police Department');
 insert into Experience values ( 95 , 868, '1991-06-01', '1995-03-03');
 
-http://www.linkedin.com/pub/matthew-mohan/8b/606/275
 
-http://www.linkedin.com/pub/andrew-simpson/67/835/a41?trk=pub-pbmap
 insert into User values ( 96 , 'Andrew' , 'Simpson', 28, 0, 'Aviation & Aerospace');
 insert into Education values ( 96 , 208 , 265 , 'Bachelor of Science (B.S.)', '2009 – 2013', '2009 – 2013');
 insert into University values ( 208 , 'Saint Louis University');
@@ -5774,7 +5671,6 @@ insert into Experience values ( 96 , 870, '2007-04-01', '2014-12-15');
 insert into Employer values ( 871 , 'Dierbergs Markets');
 insert into Experience values ( 96 , 871, '2008-06-01', '2010-07-02');
 
-http://www.linkedin.com/pub/jeremy-payne/6a/65b/457?trk=pub-pbmap
 insert into User values ( 97 , 'Jeremy' , 'Payne', 74, 0, 'Aviation & Aerospace');
 insert into Education values ( 97 , 209 , 266 , 'Master of Science (MS)', '2013 – 2015 (expected)', '2013 – 2015 (expected)');
 insert into University values ( 209 , 'San Diego State University-California State University');
@@ -5811,7 +5707,6 @@ insert into Experience values ( 97 , 873, '2013-06-01', '2014-07-01');
 insert into Employer values ( 874 , 'SPAWAR');
 insert into Experience values ( 97 , 874, '2011-05-01', '2011-08-04');
 
-http://www.linkedin.com/pub/jason-bely/17/501/350?trk=pub-pbmap
 insert into User values ( 98 , 'Jason' , 'Bely', 96, 0, 'Mechanical or Industrial Engineering');
 insert into Education values ( 98 , 210 , 267 , 'M.S.', '2009 – 2010', '2009 – 2010');
 insert into University values ( 210 , 'University of California, San Diego');
@@ -5846,7 +5741,6 @@ insert into Experience values ( 98 , 876, '2009-01-01', '2011-06-02');
 insert into Employer values ( 877 , 'United States Navy');
 insert into Experience values ( 98 , 877, '2008-01-01', '');
 
-http://www.linkedin.com/pub/brandon-sheets/58/b18/379?trk=pub-pbmap
 insert into User values ( 99 , 'Brandon' , 'Sheets', 271, 0, 'Aviation & Aerospace');
 insert into Education values ( 99 , 212 , 202 , '', '1996 – 2000', '1996 – 2000');
 insert into University values ( 212 , 'Abilene Christian University');
@@ -5925,7 +5819,6 @@ insert into Experience values ( 99 , 879, '2002-08-01', '2014-12-12');
 insert into Employer values ( 880 , 'REALtalk Keynote');
 insert into Experience values ( 99 , 880, '2010-08-01', '2014-12-15');
 
-http://www.linkedin.com/pub/layce-coskey-berry/5/b1/10?trk=pub-pbmap
 insert into User values ( 100 , 'Layce' , 'Coskey Berry', 188, 0, 'Telecommunications');
 insert into Education values ( 100 , 213 , 268 , 'Master of Science', '2001 – 2003', '2001 – 2003');
 insert into University values ( 213 , 'Texas Tech University');
@@ -5940,10 +5833,8 @@ insert into Experience values ( 100 , 883, '2004-01-01', '');
 insert into Employer values ( 884 , 'Kforce Professional Staffing');
 insert into Experience values ( 100 , 884, '2004-01-01', '');
 
-http://www.linkedin.com/pub/jodi-schoeneck/3/32a/b00?trk=pub-pbmap
 insert into User values ( 101 , 'Jodi' , 'Schoeneck', 253, 0, 'Telecommunications');
 
-http://www.linkedin.com/pub/robert-rosenthal/3/687/b97?trk=pub-pbmap
 insert into User values ( 102 , 'Robert' , 'Rosenthal', 140, 0, 'Information Technology and Services');
 insert into Has_skill values ( 102 , 871, 0);
 insert into Skill values ( 871 , 'Cisco Technologies');
@@ -6010,7 +5901,6 @@ insert into Experience values ( 102 , 881, '1998-06-01', '2014-12-16');
 insert into Employer values ( 885 , 'United States Marine Corps');
 insert into Experience values ( 102 , 885, '1987-01-01', '');
 
-http://www.linkedin.com/pub/amy-johnson/23/4a7/638?trk=pub-pbmap
 insert into User values ( 103 , 'Amy' , 'Johnson', 90, 0, 'Telecommunications');
 insert into Has_skill values ( 103 , 943, 0);
 insert into Skill values ( 943 , 'Telecommunications');
