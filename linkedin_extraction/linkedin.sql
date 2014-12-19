@@ -1,11 +1,11 @@
 drop table if exists User;
 create table User (
   UserID integer,
-  Fname varchar(30),
-  Lname varchar(30),
+  Fname varchar(45),
+  Lname varchar(45),
   NumConnection integer,
   Age integer,
-  Industry varchar(30)
+  Industry varchar(45)
 );
 
 drop table if exists Education;
@@ -13,35 +13,35 @@ create table Education (
   UserID integer,
   UniversityID integer,
   DegreeID integer,
-  Field varchar(30),
-  StartDate varchar(30),
-  EndDate varchar(30)
+  Field varchar(45),
+  StartDate varchar(45),
+  EndDate varchar(45)
 );
 
 drop table if exists Degree;
 create table Degree (
   DegreeID integer,
-  DegreeName varchar(30)
+  DegreeName varchar(45)
 );
 
 drop table if exists University;
 create table University (
   UniversityID integer,
-  UniversityName varchar(30)
+  UniversityName varchar(45)
 );
 
 drop table if exists Experience;
 create table Experience (
   UserID integer,
   EmployerID integer,
-  StartDate varchar(30),
-  EndDate varchar(30)
+  StartDate varchar(45),
+  EndDate varchar(45)
 );
 
 drop table if exists Employer;
 create table Employer (
   EmployerID integer,
-  EmployerName varchar(30)
+  EmployerName varchar(45)
 );
 
 drop table if exists Has_skill;
@@ -54,7 +54,7 @@ create table Has_skill (
 drop table if exists Skill;
 create table Skill (
   SkillID integer,
-  SkillName varchar(30)
+  SkillName varchar(45)
 );
 
 drop table if exists Knows_language;
@@ -66,7 +66,7 @@ create table Knows_language (
 drop table if exists Languages;
 create table Languages (
   LanguageID integer,
-  LanguageName varchar(30)
+  LanguageName varchar(45)
 ) ;
 
 drop table if exists Member_of;
@@ -78,7 +78,7 @@ create table Member_of (
 drop table if exists Groups;
 create table Groups (
   GroupID integer,
-  GroupName varchar(30),
+  GroupName varchar(45),
   NumMembers integer
 );
 

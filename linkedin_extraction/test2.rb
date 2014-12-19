@@ -2,14 +2,60 @@
 
 require 'mechanize'
 
-
-# output = File.open( "output.txt","w" )
+# inspired by http://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/33-advanced-arrays/lessons/86-stacks-and-queues
+class Stack
+  def initialize(size)
+    @size = size
+    @store = Array.new(@size)
+    @top = -1
+  end
+  
+  def pop
+    if empty?
+      nil
+    else
+      popped = @store[@top]
+      @store[@top] = nil
+      @top = @top.pred
+      popped
+      @size -= 1
+    end
+  end
+  
+  def push(element)
+    if full? or element.nil?
+      nil
+    else
+      @top = @top.succ
+      puts element
+      @store[@top] = element
+      self
+    end
+  end
+  
+  def size
+    @size
+  end
+  
+  def look
+    @store[@top]
+  end
+  
+  private
+  
+  def full?
+    @top == (@size - 1)
+  end
+  
+  def empty?
+    @top == -1
+  end
+end
 
 class RetrieveProfile
 
 	class << self; 
 		attr_accessor :user_id, 
-					  :user_id_mark,
 					  :university_id,
 					  :university_id_mark,
 					  :degree_id,
@@ -24,8 +70,7 @@ class RetrieveProfile
 					  :employer_id_mark
 	end
 
-	@user_id = {}
-	@user_id_mark = 0
+	@user_id = 0
 	@university_id = {}
 	@university_id_mark = 100
 	@degree_id = {}
@@ -67,7 +112,7 @@ class RetrieveProfile
 	end
 
 	def generate_user_id
-		RetrieveProfile.user_id_mark += 1
+		RetrieveProfile.user_id += 1
 	end
 
 	def generate_university_id
@@ -118,26 +163,18 @@ class RetrieveProfile
 	def generate_sql(mech)
 		first_name = parse_firstname(mech)
 		last_name = parse_lastname(mech)
-		full_name = first_name + ' ' + last_name
 		connections = parse_connections(mech)
 		industry = parse_industry(mech)
 		skills = parse_skills(mech)
 
-		if !RetrieveProfile.user_id.has_key?(full_name)
-			RetrieveProfile.user_id[full_name] = RetrieveProfile.user_id_mark
-			generate_user_id
-		else
-			return
-		end
-
+		generate_user_id
 		age = 0
-		
-		puts "insert into User values ( #{RetrieveProfile.user_id[full_name]} , '#{first_name}' , '#{last_name}', #{connections}, #{age}, '#{industry}');"
+		puts "insert into User values ( #{RetrieveProfile.user_id} , '#{first_name}' , '#{last_name}', #{connections}, #{age}, '#{industry}');"
 
 		education = mech.search('.background-education .education').map do |item|
 			university_name = item.at('h4').text.gsub(/\s+|\n/, ' ').strip if item.at('h4')
 			degree_name = item.at('.degree').text.gsub(/\s+|\n/, ' ').strip if item.at('.degree')
-			degree_name = degree_name.chomp(',') if degree_name != nil # for some reason, all degree names are followed by a comma in the html			
+			degree_name = degree_name.chomp(',')  # for some reason, all degree names are followed by a comma in the html			
 			degree_name = degree_name.gsub(/\'/, '').strip if item.at('.degree')			
 			period = item.at('.education-date').text.gsub(/\s+|\n/, ' ').strip if item.at('.education-date')
 
@@ -150,7 +187,7 @@ class RetrieveProfile
 				RetrieveProfile.degree_id[degree_name] = RetrieveProfile.degree_id_mark
 				generate_degree_id
 			end
-			puts "insert into Education values ( #{RetrieveProfile.user_id[full_name]} , #{RetrieveProfile.university_id[university_name]} , #{RetrieveProfile.degree_id[degree_name]} , '#{degree_name}', '#{period}', '#{period}');"
+			puts "insert into Education values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.university_id[university_name]} , #{RetrieveProfile.degree_id[degree_name]} , '#{degree_name}', '#{period}', '#{period}');"
 			puts "insert into University values ( #{RetrieveProfile.university_id[university_name]} , '#{university_name}');"	
 		end
 
@@ -163,7 +200,7 @@ class RetrieveProfile
 				generate_skill_id
 			end
 
-			puts "insert into Has_skill values ( #{RetrieveProfile.user_id[full_name]} , #{RetrieveProfile.skill_id[skill]}, #{endorsements});"
+			puts "insert into Has_skill values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.skill_id[skill]}, #{endorsements});"
 			puts "insert into Skill values ( #{RetrieveProfile.skill_id[skill]} , '#{skill}');"
 		end
 
@@ -177,7 +214,7 @@ class RetrieveProfile
 				generate_group_id
 			end
 
-			puts "insert into Member_of values ( #{RetrieveProfile.user_id[full_name]} , #{RetrieveProfile.group_id[group_name]});"
+			puts "insert into Member_of values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.group_id[group_name]});"
 			puts "insert into Groups values ( #{RetrieveProfile.group_id[group_name]} , '#{group_name}', #{member_count});"
 		end
 
@@ -190,7 +227,7 @@ class RetrieveProfile
 				generate_language_id
 			end
 
-			puts "insert into Knows_language values ( #{RetrieveProfile.user_id[full_name]} , #{RetrieveProfile.language_id[language_name]});"
+			puts "insert into Knows_language values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.language_id[language_name]});"
 			puts "insert into Languages values ( #{RetrieveProfile.language_id[language_name]} , '#{language_name}');"
 		end
 
@@ -234,7 +271,7 @@ class RetrieveProfile
 			start_date = employment[:start_date]
 			end_date = employment[:end_date]
 			puts "insert into Employer values ( #{RetrieveProfile.employer_id[employment[:location]]} , '#{employer_name}');"
-			puts "insert into Experience values ( #{RetrieveProfile.user_id[full_name]} , #{RetrieveProfile.employer_id[employment[:location]]}, '#{start_date}', '#{end_date}');"
+			puts "insert into Experience values ( #{RetrieveProfile.user_id} , #{RetrieveProfile.employer_id[employment[:location]]}, '#{start_date}', '#{end_date}');"
 		end
 	end
 
@@ -261,10 +298,11 @@ class RetrieveProfile
 end
 
 links_arr = []
+links_stack = Stack.new(1)
 File.readlines('onelink.txt').each do |line|
 	if "#{line}".chomp != ""
-		# links_arr = links_arr + [line]
-		links_arr << line
+		links_arr = links_arr + [line]
+		links_stack.push(line)
 	end
 end
 
@@ -282,27 +320,16 @@ USER_AGENTS = [ 'Windows IE 6',
 @agent.max_history = 0
 
 profile = RetrieveProfile.new
-visited_links = {}
 
 while 1
-	if links_arr.size <= 0
+	if links_stack.size == 0
 		break
 	else
-		profile_link = links_arr.pop
-		puts ''
+		profile_link = links_stack.pop
 		puts profile_link
-		mech = @agent.get(profile_link)
-		profile.generate_sql(mech)	
-		visited_links[profile_link] = 1
-
-		visitor_links = mech.search('.insights-browse-map/ul/li').map do |visitor|
-			link = visitor.at('a')['href']
-			if !visited_links.has_key?(link)
-				links_arr << link
-			end
-		end	
+		# mech = @agent.get(profile_link)
+		# profile.generate_sql(mech)		
 	end
-	profile.delay_me
 end
 
 # links_arr.each do |profile_link|
@@ -311,5 +338,5 @@ end
 # end
 
 
-# output.close
+
 
