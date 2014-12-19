@@ -22,7 +22,7 @@ results = cursor.fetchone()
 print str(results[1])   # returns JOHNS HOPKINS
 """
 
-field = "Financial Services" # This could be changed to whatever field you need
+field = "Medical Devices" # This could be changed to whatever field you need
 getSkills_cmd = "select S.SkillName, COUNT(U.UserID)  from User as U, Has_skill as Hs, Skill as S where U.Industry = \""+field+"\" AND U.UserID = Hs.UserID AND Hs.SkillID = S.SkillID GROUP BY S.SkillName Order by COUNT(U.UserID) DESC"
 #getSkills_cmd = "select U.UserID from User as U where U.Industry = \""+field+"\""
 #getSkills_cmd = "select User.UserID, User.Lname from User where User.industry = \"Computer Software\""
@@ -33,7 +33,7 @@ results = cursor.fetchall()
 pop_skills = []
 for i in xrange(min(15,len(results))):
 	pop_skills.append(results[i][0])
-dbprint pop_skills
+print pop_skills
 
 i=0
 old_list = []
@@ -53,6 +53,7 @@ for skill in pop_skills:
 			break
 	i+=1
 
+print i
 for ID in old_list:
 	findUser_cmd = "select User.Fname, User.Lname from User where User.UserID="+str(ID)
 	cursor.execute(findUser_cmd)
